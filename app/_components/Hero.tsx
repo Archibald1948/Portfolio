@@ -28,7 +28,7 @@ const COLORS = {
 } as const;
 
 const CONTENT = {
-  badge: 'Open Source Contributor',
+  badge: 'TIL',
   title: 'KIM SEONG SU',
   subtitle: "Hello. I'm thinking about a good code.",
   description:
@@ -60,7 +60,7 @@ export default function Hero({ mode = 'dark' }: HeroProps) {
         {/* Version Badge */}
         <div className="mb-8 flex justify-center">
           <Link
-            href="/changelog"
+            href="https://github.com/kss2002/TIL"
             className="inline-flex items-center gap-2 font-mono text-sm transition-colors hover:opacity-80"
             style={{ color: colors.textMuted }}
           >
