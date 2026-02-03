@@ -21,65 +21,92 @@ const COLORS = {
   },
 } as const;
 
-const TESTIMONIALS = [
+const ACTIVITIES = [
   {
-    quote: 'gave this a try and holy shit. this is a new productivity unlock',
-    author: '@nexxel',
-    title: 'Co-Founder, mocha.email',
-    avatar: '/registry/conductor-build-testimonial-2/avatar-1.jpg',
+    category: '🌍 Community',
+    title: 'GDG',
+    period: '2024.03 ~ 2025.09',
+    badge: null,
   },
   {
-    quote:
-      "This is seriously insane... So much better than VSCode it's making me sick.",
-    author: 'Richard Waters',
-    title: 'CEO, Proprietary Innovation Labs',
-    avatar: '/registry/conductor-build-testimonial-2/avatar-2.jpg',
+    category: '🌍 Community',
+    title: '카카오 유니브',
+    period: '2024.06 ~ 2024.12',
+    badge: null,
   },
   {
-    quote:
-      'Conductor with multiple repos in multiple workspaces has been insane for my workflow, I feel like a true full stack engineer cross-platform',
-    author: 'Umar Qattan',
-    title: 'Sr. Software Engineer, Life360',
-    avatar: '/registry/conductor-build-testimonial-2/avatar-3.jpg',
+    category: '🌍 Community',
+    title: '카카오 유니브',
+    period: '2025.02 ~ 2025.12',
+    badge: '운영진',
   },
   {
-    quote: 'Conductor is very good.',
-    author: 'Joe Choi-Greene',
-    title: 'Co-Founder and CTO, Clearly AI',
-    avatar: '/registry/conductor-build-testimonial-2/avatar-4.jpeg',
+    category: '🌍 Community',
+    title: '멋쟁이사자처럼',
+    period: '2025.03 ~ 2025.12',
+    badge: null,
   },
   {
-    quote: 'Loving using Conductor so far! Do give it a try.',
-    author: 'Ovais Tariq',
-    title: 'Co-Founder and CEO, Tigris Data',
-    avatar: '/registry/conductor-build-testimonial-2/avatar-5.jpg',
+    category: '🌍 Community',
+    title: '멋쟁이사자처럼',
+    period: '2026.01 ~',
+    badge: '운영진',
   },
   {
-    quote: 'Future of AI software-making looks something like this',
-    author: 'Raphael Schaad',
-    title: 'Founder Cron, Design @ Notion',
-    avatar: '/registry/conductor-build-testimonial-2/avatar-6.jpg',
+    category: '🚀 Product',
+    title: 'ShortsGen',
+    period: 'Active',
+    badge: null,
+    link: 'https://shorts-demodev.vercel.app',
   },
   {
-    quote:
-      'If you want to run multiple Claude Code agents at the same time, use Conductor. Beautiful UI and handles all the git worktree stuff for you!',
-    author: 'Ian Nuttall',
-    title: 'serial internet biz builder',
-    avatar: '/registry/conductor-build-testimonial-2/avatar-7.jpg',
+    category: '💻 Project',
+    title: '카카오 단풍톤',
+    period: '2024.11.01 ~ 12.10',
+    badge: '팀장',
+    link: 'https://github.com/kss2002/2024_DANPOONG_TEAM_60_FE',
   },
   {
-    quote:
-      "It took some adjustment, but now I can't imagine building without @conductor_build",
-    author: 'Cole Bemis',
-    title: 'Design Engineer, Notion',
-    avatar: '/registry/conductor-build-testimonial-2/avatar-8.jpeg',
+    category: '💻 Project',
+    title: '멋쟁이사자처럼 해커톤',
+    period: '2025.07.22 ~ 08.26',
+    badge: null,
+    link: 'https://github.com/kss2002/domo-fe',
   },
   {
-    quote:
-      "Is Conductor the new Cursor? Just used it for the first time and it's lovely",
-    author: 'Stammy',
-    title: 'Head of Design, Sesame',
-    avatar: '/registry/conductor-build-testimonial-2/avatar-9.jpg',
+    category: '💻 Project',
+    title: '카카오 시즌톤',
+    period: '2025.08.18 ~ 09.07',
+    badge: null,
+    link: 'https://github.com/kss2002/2025_SEASONTHON_TEAM_63_FE',
+  },
+  {
+    category: '💻 Project',
+    title: 'XRPL 해커톤',
+    period: '2025.09.14 ~ 09.20',
+    badge: null,
+    link: 'https://github.com/kss2002/roasis-front',
+  },
+  {
+    category: '💻 Project',
+    title: '멋쟁이사자처럼 간지톤',
+    period: '2025.11.01 ~ 11.22',
+    badge: '팀장',
+    link: 'https://github.com/kss2002/SCamp',
+  },
+  {
+    category: '🔓 Open Source',
+    title: 'Toss Contributor',
+    period: 'Active',
+    badge: 'Contributor',
+    link: 'https://github.com/toss/suspensive/pulls?q=kss2002',
+  },
+  {
+    category: '🔓 Open Source',
+    title: 'DevFive Contributor',
+    period: 'Active',
+    badge: 'Contributor',
+    link: 'https://github.com/dev-five-git/devup-ui/graphs/contributors',
   },
 ];
 
@@ -87,8 +114,8 @@ const TESTIMONIALS = [
 // END CUSTOMIZATION
 // ============================================================================
 
-import Image from 'next/image';
-import { BadgeCheck } from 'lucide-react';
+import Link from 'next/link';
+import { ExternalLink } from 'lucide-react';
 
 interface ImonialProps {
   mode?: 'light' | 'dark';
@@ -100,54 +127,85 @@ export default function Imonial({ mode = 'dark' }: ImonialProps) {
   return (
     <section className="w-full py-16" style={{ backgroundColor: colors.bg }}>
       <div className="mx-auto max-w-7xl px-6">
+        {/* Section Title */}
+        <h2
+          className="mb-8 text-center font-mono text-2xl font-medium"
+          style={{ color: colors.text }}
+        >
+          Activities & Projects
+        </h2>
         {/* Masonry Grid */}
         <div className="columns-1 gap-4 md:columns-2 lg:columns-3">
-          {TESTIMONIALS.map((testimonial, index) => (
-            <div
-              key={index}
-              className="mb-4 break-inside-avoid rounded-lg p-6"
-              style={{ backgroundColor: colors.cardBg }}
-            >
-              {/* Quote */}
-              <p
-                className="mb-4 font-mono text-sm leading-relaxed"
-                style={{ color: colors.text }}
+          {ACTIVITIES.map((activity, index) => {
+            const CardContent = (
+              <div
+                key={index}
+                className="mb-4 break-inside-avoid rounded-lg p-6 transition-all hover:scale-[1.02]"
+                style={{ backgroundColor: colors.cardBg }}
               >
-                {testimonial.quote}
-              </p>
+                {/* Category */}
+                <span
+                  className="mb-2 inline-block font-mono text-xs"
+                  style={{ color: colors.textMuted }}
+                >
+                  {activity.category}
+                </span>
 
-              {/* Author */}
-              <div className="flex items-center gap-3">
-                <Image
-                  src={testimonial.avatar}
-                  alt={testimonial.author}
-                  width={40}
-                  height={40}
-                  className="h-10 w-10 rounded-full object-cover"
-                />
-                <div>
-                  <div className="flex items-center gap-1">
-                    <span
-                      className="font-mono text-sm font-medium"
-                      style={{ color: colors.text }}
-                    >
-                      {testimonial.author}
-                    </span>
-                    <BadgeCheck
-                      className="h-4 w-4"
-                      style={{ color: colors.verifiedBadge }}
-                    />
-                  </div>
-                  <span
-                    className="font-mono text-xs"
-                    style={{ color: colors.textMuted }}
+                {/* Title & Badge */}
+                <div className="mb-2 flex items-center gap-2">
+                  <h3
+                    className="font-mono text-base font-medium"
+                    style={{ color: colors.text }}
                   >
-                    {testimonial.title}
-                  </span>
+                    {activity.title}
+                  </h3>
+                  {activity.badge && (
+                    <span
+                      className="rounded-full px-2 py-0.5 font-mono text-xs"
+                      style={{
+                        backgroundColor: colors.verifiedBadge,
+                        color: '#FFFFFF',
+                      }}
+                    >
+                      {activity.badge}
+                    </span>
+                  )}
                 </div>
+
+                {/* Period */}
+                <p
+                  className="font-mono text-sm"
+                  style={{ color: colors.textMuted }}
+                >
+                  {activity.period}
+                </p>
+
+                {/* Link indicator */}
+                {activity.link && (
+                  <div
+                    className="mt-3 flex items-center gap-1 font-mono text-xs"
+                    style={{ color: colors.verifiedBadge }}
+                  >
+                    <ExternalLink className="h-3 w-3" />
+                    <span>View Project</span>
+                  </div>
+                )}
               </div>
-            </div>
-          ))}
+            );
+
+            return activity.link ? (
+              <Link
+                key={index}
+                href={activity.link}
+                target="_blank"
+                className="block"
+              >
+                {CardContent}
+              </Link>
+            ) : (
+              CardContent
+            );
+          })}
         </div>
       </div>
     </section>

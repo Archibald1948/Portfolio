@@ -27,34 +27,22 @@ const COLORS = {
   },
 } as const;
 
-const IMAGES = {
-  logo: {
-    path: '/registry/conductor-build-hero-1/logo.png',
-    alt: 'Conductor Logo',
-  },
-  appScreenshot: {
-    path: '/registry/conductor-build-hero-1/app-screenshot.png',
-    alt: 'Conductor App Screenshot - IDE interface showing multiple Claude Code agents working in parallel',
-  },
-} as const;
-
 const CONTENT = {
-  badge: "See what's new in 0.25.11",
-  title: 'CONDUCTOR',
-  subtitle: 'Run a team of coding agents on your Mac.',
+  badge: 'Open Source Contributor',
+  title: 'KIM SEONG SU',
+  subtitle: "Hello. I'm thinking about a good code.",
   description:
-    "Create parallel Codex + Claude Code agents in isolated workspaces. See at a glance what they're working on, then review and merge their changes.",
-  primaryCta: 'Download Conductor',
-  secondaryCta: 'Learn how it works',
+    'Frontend Developer passionate about React, Next.js, and Open Source. Active contributor to Toss and DevFive projects. Building products and participating in hackathons.',
+  primaryCta: 'View GitHub',
+  secondaryCta: 'Contact Me',
 } as const;
 
 // ============================================================================
 // END CUSTOMIZATION
 // ============================================================================
 
-import Image from 'next/image';
 import Link from 'next/link';
-import { Download, ArrowRight } from 'lucide-react';
+import { Github, Mail, ArrowRight } from 'lucide-react';
 
 interface HeroProps {
   mode?: 'light' | 'dark';
@@ -84,17 +72,12 @@ export default function Hero({ mode = 'dark' }: HeroProps) {
         {/* ASCII Art Title */}
         <div className="mb-8 flex justify-center">
           <pre
-            className="font-mono text-xs leading-tight sm:text-sm md:text-base"
+            className="font-mono text-xs leading-tight sm:text-sm md:text-base text-center"
             style={{ color: colors.text }}
           >
-            {`  
-  ██████╗ ██████╗ ███╗   ██╗██████╗ ██╗   ██╗ ██████╗████████╗ ██████╗ ██████╗
-  ██╔════╝██╔═══██╗████╗  ██║██╔══██╗██║   ██║██╔════╝╚══██╔══╝██╔═══██╗██╔══██╗
-  ██║     ██║   ██║██╔██╗ ██║██║  ██║██║   ██║██║        ██║   ██║   ██║██████╔╝
-  ██║     ██║   ██║██║╚██╗██║██║  ██║██║   ██║██║        ██║   ██║   ██║██╔══██╗
-  ╚██████╗╚██████╔╝██║ ╚████║██████╔╝╚██████╔╝╚██████╗   ██║   ╚██████╔╝██║  ██║
-  ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═════╝  ╚═════╝  ╚═════╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝
-  `}
+            {`░█▀▄░█▀▀░█░█░█▀▀░█░░░█▀█░█▀█░█▀▀░█▀▄
+░█░█░█▀▀░▀▄▀░█▀▀░█░░░█░█░█▀▀░█▀▀░█▀▄
+░▀▀░░▀▀▀░░▀░░▀▀▀░▀▀▀░▀▀▀░▀░░░▀▀▀░▀░▀`}
           </pre>
         </div>
 
@@ -117,7 +100,8 @@ export default function Hero({ mode = 'dark' }: HeroProps) {
         {/* CTA Buttons */}
         <div className="mb-16 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Link
-            href="/download"
+            href="https://github.com/kss2002"
+            target="_blank"
             className="flex items-center gap-2 rounded-md px-6 py-3 font-mono text-sm transition-colors hover:opacity-90"
             style={{
               backgroundColor: colors.buttonPrimaryBg,
@@ -125,10 +109,10 @@ export default function Hero({ mode = 'dark' }: HeroProps) {
             }}
           >
             {CONTENT.primaryCta}
-            <Download className="h-4 w-4" />
+            <Github className="h-4 w-4" />
           </Link>
           <Link
-            href="/how-it-works"
+            href="mailto:know.warehouse02@gmail.com"
             className="flex items-center gap-2 rounded-md border px-6 py-3 font-mono text-sm transition-colors hover:opacity-80"
             style={{
               backgroundColor: colors.buttonSecondaryBg,
@@ -137,20 +121,46 @@ export default function Hero({ mode = 'dark' }: HeroProps) {
             }}
           >
             {CONTENT.secondaryCta}
-            <ArrowRight className="h-4 w-4" />
+            <Mail className="h-4 w-4" />
           </Link>
         </div>
 
-        {/* App Screenshot */}
-        <div className="relative mx-auto max-w-5xl overflow-hidden rounded-lg border border-zinc-800 shadow-2xl">
-          <Image
-            src={IMAGES.appScreenshot.path}
-            alt={IMAGES.appScreenshot.alt}
-            width={1440}
-            height={990}
-            className="h-auto w-full"
-            priority
-          />
+        {/* Tech Stack */}
+        <div className="text-center">
+          <h3
+            className="mb-6 font-mono text-lg font-medium"
+            style={{ color: colors.text }}
+          >
+            Main Tech
+          </h3>
+          <div className="mb-8 flex justify-center">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://skillicons.dev/icons?i=react,nextjs,js,ts,nodejs,md,ruby,rails,html,css"
+              alt="Main Tech Stack"
+              className="h-16"
+            />
+          </div>
+          <h3
+            className="mb-6 font-mono text-lg font-medium"
+            style={{ color: colors.text }}
+          >
+            Tools & Sub Tech
+          </h3>
+          <div className="flex flex-col items-center gap-4">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://skillicons.dev/icons?i=git,github,bash,figma,notion,vite,webpack,vercel,netlify,tailwind,emotion,scss"
+              alt="Tools"
+              className="h-12"
+            />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://skillicons.dev/icons?i=py,npm,yarn,pnpm,supabase,vscode,idea,pycharm,eclipse"
+              alt="Sub Tech"
+              className="h-12"
+            />
+          </div>
         </div>
       </div>
     </section>
