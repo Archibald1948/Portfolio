@@ -21,18 +21,10 @@ const COLORS = {
   },
 } as const;
 
-const IMAGES = {
-  logo: {
-    path: '/registry/conductor-build-header-0/logo.png',
-    alt: 'Conductor Logo',
-  },
-} as const;
-
 // ============================================================================
 // END CUSTOMIZATION
 // ============================================================================
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { Download } from 'lucide-react';
 
@@ -51,30 +43,31 @@ export default function Header({ mode = 'dark' }: HeaderProps) {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         {/* Logo */}
         <Link href="/" className="flex items-center">
-          <Image
-            src={IMAGES.logo.path}
-            alt={IMAGES.logo.alt}
-            width={32}
-            height={32}
-            className="h-8 w-8"
-          />
+          <pre
+            className="font-mono text-xs leading-tight sm:text-sm md:text-base"
+            style={{ color: colors.text }}
+          >
+            kimseongsu
+          </pre>
         </Link>
 
         {/* Navigation */}
         <nav className="flex items-center gap-8">
           <Link
-            href="/docs"
+            href="https://codingworld2002.tistory.com"
             className="font-mono text-sm transition-colors hover:opacity-80"
+            target="_blank"
             style={{ color: colors.text }}
           >
-            Docs
+            Blog
           </Link>
           <Link
-            href="/join"
+            href="https://github.com/kss2002"
             className="font-mono text-sm transition-colors hover:opacity-80"
+            target="_blank"
             style={{ color: colors.text }}
           >
-            Join Us
+            GitHub
           </Link>
           <Link
             href="/download"
