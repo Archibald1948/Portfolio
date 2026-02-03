@@ -1,5 +1,6 @@
 import Hero from './_components/Hero';
 import Imonial from './_components/Imonial';
+import OpenSource from './_components/OpenSource';
 import Faq from './_components/Faq';
 import Footer from './_components/Footer';
 
@@ -8,6 +9,7 @@ export default function Home() {
     <>
       <Hero />
       <Imonial />
+      <OpenSource />
       <Faq />
       <Footer />
     </>
