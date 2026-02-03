@@ -213,7 +213,7 @@ export default function OpenSource({ mode = 'dark' }: OpenSourceProps) {
             2026.01.25)
           </p>
           <Link
-            className="font-mono text-xs hover:opacity-80"
+            className="font-tossface text-sm hover:opacity-80"
             href="https://github.com/opensource-contributors-group/opensource-contributors"
             target="_blank"
           >
