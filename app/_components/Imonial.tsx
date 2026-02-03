@@ -174,7 +174,7 @@ export default function Imonial({ mode = 'dark' }: ImonialProps) {
           <div>
             <div className="mb-4">
               <h3
-                className="font-mono text-lg font-bold"
+                className="font-tossface text-lg font-bold"
                 style={{ color: colors.text }}
               >
                 {SECTIONS.community.title}
@@ -197,7 +197,7 @@ export default function Imonial({ mode = 'dark' }: ImonialProps) {
           <div>
             <div className="mb-4">
               <h3
-                className="font-mono text-lg font-bold"
+                className="font-tossface text-lg font-bold"
                 style={{ color: colors.text }}
               >
                 {SECTIONS.product.title}
@@ -220,7 +220,7 @@ export default function Imonial({ mode = 'dark' }: ImonialProps) {
           <div>
             <div className="mb-4">
               <h3
-                className="font-mono text-lg font-bold"
+                className="font-tossface text-lg font-bold"
                 style={{ color: colors.text }}
               >
                 {SECTIONS.project.title}
