@@ -9,7 +9,7 @@
 
 **좋은 코드를 고민하는 프론트엔드 개발자, 김성수의 포트폴리오 웹사이트입니다.**
 
-[🌐 Live Demo](https://portfolio-kss2002.vercel.app) · [📧 Contact](mailto:know.warehouse02@gmail.com)
+[🌐 Live Demo](https://portfolio-kss.netlify.app) · [📧 Contact](mailto:know.warehouse02@gmail.com)
 
 </div>
 
@@ -95,12 +95,6 @@ pnpm start
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kss2002)
 
 </div>
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
----
 
 <div align="center">
   <sub>Built with ❤️ by <a href="https://github.com/kss2002">Kim Seong Su</a></sub>
