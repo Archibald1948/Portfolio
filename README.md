@@ -15,7 +15,7 @@
 
 ---
 
-## ✨ Features
+## Features
 
 - **반응형 디자인** - 모든 디바이스에서 최적화된 UI/UX
 - **모던 UI** - 글래스모피즘과 그라데이션을 활용한 세련된 디자인
@@ -23,7 +23,7 @@
 - **오픈소스 활동 소개** - Toss, DevFive 등 오픈소스 기여 활동 하이라이트
 - **프로젝트 쇼케이스** - 커뮤니티 활동 및 프로젝트 이력 전시
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Category            | Technologies           |
 | ------------------- | ---------------------- |
@@ -33,7 +33,7 @@
 | **Icons**           | Lucide React           |
 | **Package Manager** | pnpm                   |
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 port/
@@ -53,7 +53,7 @@ port/
 └── ...config files
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -86,7 +86,7 @@ pnpm build
 pnpm start
 ```
 
-## 📬 Contact
+## Contact
 
 <div align="center">
 
