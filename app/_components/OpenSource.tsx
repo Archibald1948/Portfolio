@@ -48,6 +48,13 @@ const CONTRIBUTIONS = {
           prLink: 'https://github.com/toss/granite/pulls?q=kss2002',
           issueLink: 'https://github.com/toss/granite/issues?q=kss2002',
         },
+        {
+          name: 'technical-writing',
+          prLink:
+            'https://github.com/toss/technical-writing/pulls?q=is%3Apr+is%3Aclosed',
+          issueLink:
+            'https://github.com/toss/technical-writing/issues?q=is%3Aissue%20state%3Aclosed',
+        },
       ],
     },
     {
