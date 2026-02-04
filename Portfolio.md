@@ -57,6 +57,8 @@ toss
 - [frontend-fundamentals Issues](https://github.com/toss/frontend-fundamentals/issues?q=kss2002)
 - [granite PR](https://github.com/toss/granite/pulls?q=kss2002+)
 - [granite Issues](https://github.com/toss/granite/issues?q=kss2002)
+- [technical-writing PR](https://github.com/toss/technical-writing/pulls?q=is%3Apr+is%3Aclosed)
+- [technical-writing Issues](https://github.com/toss/technical-writing/issues?q=is%3Aissue%20state%3Aclosed)
 
 devup-five
 
