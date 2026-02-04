@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Kim Seong Su - Portfolio
 
-## Getting Started
+<div align="center">
 
-First, run the development server:
+![Next.js](https://img.shields.io/badge/Next.js-16.1.6-000000?style=for-the-badge&logo=next.js&logoColor=white)
+![React](https://img.shields.io/badge/React-19.2.3-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+**좋은 코드를 고민하는 프론트엔드 개발자, 김성수의 포트폴리오 웹사이트입니다.**
+
+[🌐 Live Demo](https://portfolio-kss2002.vercel.app) · [📧 Contact](mailto:know.warehouse02@gmail.com)
+
+</div>
+
+---
+
+## ✨ Features
+
+- **반응형 디자인** - 모든 디바이스에서 최적화된 UI/UX
+- **모던 UI** - 글래스모피즘과 그라데이션을 활용한 세련된 디자인
+- **인터랙티브 애니메이션** - 스크롤 기반 헤더 애니메이션 및 부드러운 트랜지션
+- **오픈소스 활동 소개** - Toss, DevFive 등 오픈소스 기여 활동 하이라이트
+- **프로젝트 쇼케이스** - 커뮤니티 활동 및 프로젝트 이력 전시
+
+## 🛠️ Tech Stack
+
+| Category            | Technologies           |
+| ------------------- | ---------------------- |
+| **Framework**       | Next.js 16, React 19   |
+| **Language**        | TypeScript 5           |
+| **Styling**         | TailwindCSS 4, PostCSS |
+| **Icons**           | Lucide React           |
+| **Package Manager** | pnpm                   |
+
+## 📁 Project Structure
+
+```
+port/
+├── app/
+│   ├── _components/     # 재사용 가능한 컴포넌트
+│   │   ├── Header.tsx   # 스크롤 반응형 헤더
+│   │   ├── Hero.tsx     # 히어로 섹션
+│   │   ├── Imonial.tsx  # 활동 소개 섹션
+│   │   ├── OpenSource.tsx # 오픈소스 기여 섹션
+│   │   ├── Faq.tsx      # FAQ 섹션
+│   │   └── Footer.tsx   # 푸터
+│   ├── globals.css      # 글로벌 스타일
+│   ├── layout.tsx       # 루트 레이아웃
+│   ├── page.tsx         # 메인 페이지
+│   └── not-found.tsx    # 404 페이지
+├── public/              # 정적 파일
+└── ...config files
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prerequisites
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Node.js 18.17 이상
+- pnpm (권장)
 
-## Learn More
+### Installation
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+# 저장소 클론
+git clone https://github.com/kss2002/Portfolio.git
+cd Portfolio
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# 의존성 설치
+pnpm install
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# 개발 서버 실행
+pnpm dev
+```
 
-## Deploy on Vercel
+[http://localhost:3000](http://localhost:3000)에서 결과를 확인할 수 있습니다.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Build
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+# 프로덕션 빌드
+pnpm build
+
+# 프로덕션 서버 실행
+pnpm start
+```
+
+## 📬 Contact
+
+<div align="center">
+
+[![Gmail](https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:know.warehouse02@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/seong-su-kim-5b606338a)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kss2002)
+
+</div>
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+<div align="center">
+  <sub>Built with ❤️ by <a href="https://github.com/kss2002">Kim Seong Su</a></sub>
+</div>
