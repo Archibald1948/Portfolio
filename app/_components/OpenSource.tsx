@@ -105,24 +105,24 @@ export default function OpenSource({ mode = 'dark' }: OpenSourceProps) {
         </p>
 
         {/* Organizations Grid */}
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-6 sm:gap-8 md:grid-cols-2">
           {CONTRIBUTIONS.organizations.map((org, index) => (
             <div
               key={index}
-              className="rounded-lg p-6 transition-all hover:scale-[1.02]"
+              className="rounded-lg p-4 sm:p-6 transition-all hover:scale-[1.02]"
               style={{ backgroundColor: colors.cardBg }}
             >
               {/* Organization Header */}
-              <div className="mb-6 flex items-center justify-between">
-                <div className="flex items-center gap-3">
+              <div className="mb-4 sm:mb-6 flex items-center justify-between gap-2">
+                <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
                   <h3
-                    className="font-mono text-xl font-bold"
+                    className="font-mono text-lg sm:text-xl font-bold"
                     style={{ color: colors.text }}
                   >
                     {org.name}
                   </h3>
                   <span
-                    className="rounded-full px-3 py-1 font-mono text-xs font-medium"
+                    className="rounded-full px-2 sm:px-3 py-0.5 sm:py-1 font-mono text-[10px] sm:text-xs font-medium"
                     style={{
                       backgroundColor: org.color,
                       color: '#FFFFFF',
@@ -134,53 +134,53 @@ export default function OpenSource({ mode = 'dark' }: OpenSourceProps) {
                 <Link
                   href={org.link}
                   target="_blank"
-                  className="transition-opacity hover:opacity-80"
+                  className="transition-opacity hover:opacity-80 shrink-0"
                   style={{ color: colors.textMuted }}
                 >
-                  <ExternalLink className="h-5 w-5" />
+                  <ExternalLink className="h-4 w-4 sm:h-5 sm:w-5" />
                 </Link>
               </div>
 
               {/* Projects */}
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 {org.projects.map((project, pIndex) => (
                   <div
                     key={pIndex}
-                    className="rounded-md border p-4"
+                    className="rounded-md border p-3 sm:p-4"
                     style={{ borderColor: '#3F3F46' }}
                   >
                     <h4
-                      className="mb-3 font-mono text-sm font-medium"
+                      className="mb-2 sm:mb-3 font-mono text-xs sm:text-sm font-medium"
                       style={{ color: colors.text }}
                     >
                       {project.name}
                     </h4>
-                    <div className="flex flex-wrap gap-3">
+                    <div className="flex flex-wrap gap-2 sm:gap-3">
                       {project.prLink && (
                         <Link
                           href={project.prLink}
                           target="_blank"
-                          className="flex items-center gap-1.5 rounded-md px-3 py-1.5 font-mono text-xs transition-opacity hover:opacity-80"
+                          className="flex items-center gap-1 sm:gap-1.5 rounded-md px-2 sm:px-3 py-1 sm:py-1.5 font-mono text-[10px] sm:text-xs transition-opacity hover:opacity-80"
                           style={{
                             backgroundColor: '#22C55E20',
                             color: '#22C55E',
                           }}
                         >
-                          <GitPullRequest className="h-3.5 w-3.5" />
-                          Pull Requests
+                          <GitPullRequest className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
+                          PRs
                         </Link>
                       )}
                       {project.issueLink && (
                         <Link
                           href={project.issueLink}
                           target="_blank"
-                          className="flex items-center gap-1.5 rounded-md px-3 py-1.5 font-mono text-xs transition-opacity hover:opacity-80"
+                          className="flex items-center gap-1 sm:gap-1.5 rounded-md px-2 sm:px-3 py-1 sm:py-1.5 font-mono text-[10px] sm:text-xs transition-opacity hover:opacity-80"
                           style={{
                             backgroundColor: '#8B5CF620',
                             color: '#8B5CF6',
                           }}
                         >
-                          <CircleDot className="h-3.5 w-3.5" />
+                          <CircleDot className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
                           Issues
                         </Link>
                       )}
@@ -188,13 +188,13 @@ export default function OpenSource({ mode = 'dark' }: OpenSourceProps) {
                         <Link
                           href={project.graphsLink}
                           target="_blank"
-                          className="flex items-center gap-1.5 rounded-md px-3 py-1.5 font-mono text-xs transition-opacity hover:opacity-80"
+                          className="flex items-center gap-1 sm:gap-1.5 rounded-md px-2 sm:px-3 py-1 sm:py-1.5 font-mono text-[10px] sm:text-xs transition-opacity hover:opacity-80"
                           style={{
                             backgroundColor: '#F9731620',
                             color: '#F97316',
                           }}
                         >
-                          <BarChart3 className="h-3.5 w-3.5" />
+                          <BarChart3 className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
                           Contributors
                         </Link>
                       )}
@@ -213,7 +213,7 @@ export default function OpenSource({ mode = 'dark' }: OpenSourceProps) {
             2026.01.25)
           </p>
           <Link
-            className="font-tossface text-sm hover:opacity-80"
+            className="font-tossface text-sm text-amber-50 hover:opacity-80"
             href="https://github.com/opensource-contributors-group/opensource-contributors"
             target="_blank"
           >

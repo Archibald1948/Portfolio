@@ -99,12 +99,16 @@ export default function Faq({ mode = 'dark' }: FaqProps) {
         </div>
       </div>
 
-      <div className="mx-auto max-w-2xl px-6 py-10">
-        <a href="https://www.gitanimals.org/en_US?utm_medium=image&utm_source=kss2002&utm_content=farm">
+      <div className="mx-auto max-w-2xl px-6 py-10 overflow-hidden">
+        <a
+          href="https://www.gitanimals.org/en_US?utm_medium=image&utm_source=kss2002&utm_content=farm"
+          className="block"
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="https://render.gitanimals.org/farms/kss2002"
-            width="600"
-            height="300"
+            alt="Git Animals Farm"
+            className="w-full max-w-[600px] h-auto mx-auto"
           />
         </a>
       </div>

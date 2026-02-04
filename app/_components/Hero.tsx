@@ -70,9 +70,9 @@ export default function Hero({ mode = 'dark' }: HeroProps) {
         </div>
 
         {/* ASCII Art Title */}
-        <div className="mb-8 flex justify-center">
+        <div className="mb-8 flex justify-center overflow-hidden px-2">
           <pre
-            className="font-mono text-xs leading-tight sm:text-sm md:text-base text-center"
+            className="font-mono text-[8px] leading-tight xs:text-[10px] sm:text-sm md:text-base text-center whitespace-pre scale-[0.85] sm:scale-100 origin-center"
             style={{ color: colors.text }}
           >
             {`░█▀▄░█▀▀░█░█░█▀▀░█░░░█▀█░█▀█░█▀▀░█▀▄
@@ -126,39 +126,39 @@ export default function Hero({ mode = 'dark' }: HeroProps) {
         </div>
 
         {/* Tech Stack */}
-        <div className="text-center">
+        <div className="text-center overflow-hidden">
           <h3
-            className="mb-6 font-mono text-lg font-medium"
+            className="mb-6 font-mono text-base md:text-lg font-medium"
             style={{ color: colors.text }}
           >
             Main Tech
           </h3>
-          <div className="mb-8 flex justify-center">
+          <div className="mb-8 flex justify-center overflow-x-auto px-2">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="https://skillicons.dev/icons?i=react,nextjs,js,ts,nodejs,md,ruby,rails,html,css"
               alt="Main Tech Stack"
-              className="h-16"
+              className="h-10 sm:h-12 md:h-16 max-w-full object-contain"
             />
           </div>
           <h3
-            className="mb-6 font-mono text-lg font-medium"
+            className="mb-6 font-mono text-base md:text-lg font-medium"
             style={{ color: colors.text }}
           >
             Tools & Sub Tech
           </h3>
-          <div className="flex flex-col items-center gap-4">
+          <div className="flex flex-col items-center gap-3 sm:gap-4 overflow-x-auto px-2">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="https://skillicons.dev/icons?i=git,github,bash,figma,notion,vite,webpack,vercel,netlify,tailwind,emotion,scss"
               alt="Tools"
-              className="h-12"
+              className="h-8 sm:h-10 md:h-12 max-w-full object-contain"
             />
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="https://skillicons.dev/icons?i=py,npm,yarn,pnpm,supabase,vscode,idea,pycharm,eclipse"
               alt="Sub Tech"
-              className="h-12"
+              className="h-8 sm:h-10 md:h-12 max-w-full object-contain"
             />
           </div>
         </div>

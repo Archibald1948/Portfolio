@@ -107,20 +107,20 @@ export default function Imonial({ mode = 'dark' }: ImonialProps) {
   const renderCard = (item: ActivityItem, index: number) => {
     const CardContent = (
       <div
-        className="rounded-lg p-4 transition-all hover:scale-[1.02]"
+        className="rounded-lg p-3 sm:p-4 transition-all hover:scale-[1.02]"
         style={{ backgroundColor: colors.cardBg }}
       >
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+          <div className="flex items-center gap-2 flex-wrap">
             <h4
-              className="font-mono text-sm font-medium"
+              className="font-mono text-xs sm:text-sm font-medium truncate max-w-[150px] sm:max-w-none"
               style={{ color: colors.text }}
             >
               {item.title}
             </h4>
             {item.badge && (
               <span
-                className="rounded-full px-2 py-0.5 font-mono text-xs"
+                className="rounded-full px-2 py-0.5 font-mono text-[10px] sm:text-xs whitespace-nowrap"
                 style={{
                   backgroundColor: colors.verifiedBadge,
                   color: '#FFFFFF',
@@ -132,14 +132,14 @@ export default function Imonial({ mode = 'dark' }: ImonialProps) {
           </div>
           <div className="flex items-center gap-2">
             <span
-              className="font-mono text-xs"
+              className="font-mono text-[10px] sm:text-xs whitespace-nowrap"
               style={{ color: colors.textMuted }}
             >
               {item.period}
             </span>
             {item.link && (
               <ExternalLink
-                className="h-3.5 w-3.5"
+                className="h-3 w-3 sm:h-3.5 sm:w-3.5 shrink-0"
                 style={{ color: colors.verifiedBadge }}
               />
             )}
