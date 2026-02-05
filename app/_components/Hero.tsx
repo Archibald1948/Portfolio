@@ -43,6 +43,7 @@ const CONTENT = {
 
 import Link from 'next/link';
 import { Github, Mail, ArrowRight } from 'lucide-react';
+import { DockDemo } from './DockDemo';
 
 interface HeroProps {
   mode?: 'light' | 'dark';
@@ -99,30 +100,7 @@ export default function Hero({ mode = 'dark' }: HeroProps) {
 
         {/* CTA Buttons */}
         <div className="mb-16 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Link
-            href="https://github.com/kss2002"
-            target="_blank"
-            className="flex items-center gap-2 rounded-md px-6 py-3 font-mono text-sm transition-colors hover:opacity-90"
-            style={{
-              backgroundColor: colors.buttonPrimaryBg,
-              color: colors.buttonPrimaryText,
-            }}
-          >
-            {CONTENT.primaryCta}
-            <Github className="h-4 w-4" />
-          </Link>
-          <Link
-            href="mailto:know.warehouse02@gmail.com"
-            className="flex items-center gap-2 rounded-md border px-6 py-3 font-mono text-sm transition-colors hover:opacity-80"
-            style={{
-              backgroundColor: colors.buttonSecondaryBg,
-              color: colors.buttonSecondaryText,
-              borderColor: colors.buttonSecondaryBorder,
-            }}
-          >
-            {CONTENT.secondaryCta}
-            <Mail className="h-4 w-4" />
-          </Link>
+          <DockDemo />
         </div>
 
         {/* Tech Stack */}
