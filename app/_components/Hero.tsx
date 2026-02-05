@@ -42,7 +42,7 @@ const CONTENT = {
 // ============================================================================
 
 import Link from 'next/link';
-import { Github, Mail, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { DockDemo } from './DockDemo';
 
 interface HeroProps {
