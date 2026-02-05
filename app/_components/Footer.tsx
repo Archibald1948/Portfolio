@@ -60,12 +60,8 @@ export default function Footer({ mode = 'dark' }: FooterProps) {
                 href={link.href}
                 className="font-mono text-sm transition-colors hover:opacity-80"
                 style={{ color: colors.textMuted }}
-                target={link.href.startsWith('http') ? '_blank' : undefined}
-                rel={
-                  link.href.startsWith('http')
-                    ? 'noopener noreferrer'
-                    : undefined
-                }
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 {link.label}
               </Link>
