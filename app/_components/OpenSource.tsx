@@ -86,6 +86,7 @@ import {
   CircleDot,
   BarChart3,
 } from 'lucide-react';
+import { ShineBorder } from '@/components/ui/shine-border';
 
 interface OpenSourceProps {
   mode?: 'light' | 'dark';
@@ -116,7 +117,7 @@ export default function OpenSource({ mode = 'dark' }: OpenSourceProps) {
           {CONTRIBUTIONS.organizations.map((org, index) => (
             <div
               key={index}
-              className="rounded-lg p-4 sm:p-6 transition-all hover:scale-[1.02]"
+              className="rounded-lg p-4 shadow-sm shadow-white sm:p-6 transition-all hover:scale-[1.01]"
               style={{ backgroundColor: colors.cardBg }}
             >
               {/* Organization Header */}
@@ -153,16 +154,20 @@ export default function OpenSource({ mode = 'dark' }: OpenSourceProps) {
                 {org.projects.map((project, pIndex) => (
                   <div
                     key={pIndex}
-                    className="rounded-md border p-3 sm:p-4"
+                    className="relative rounded-md border p-3 sm:p-4"
                     style={{ borderColor: '#3F3F46' }}
                   >
+                    <ShineBorder
+                      shineColor={['#A07CFE', '#FE8FB5', '#FFBE7B']}
+                      borderWidth={2}
+                    />
                     <h4
                       className="mb-2 sm:mb-3 font-mono text-xs sm:text-sm font-medium"
                       style={{ color: colors.text }}
                     >
                       {project.name}
                     </h4>
-                    <div className="flex flex-wrap gap-2 sm:gap-3">
+                    <div className=" flex flex-wrap gap-2 sm:gap-3">
                       {project.prLink && (
                         <Link
                           href={project.prLink}
