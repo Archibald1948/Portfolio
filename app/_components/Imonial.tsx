@@ -89,6 +89,7 @@ const SECTIONS = {
 
 import Link from 'next/link';
 import { ExternalLink } from 'lucide-react';
+import { AuroraText } from '@/components/ui/aurora-text';
 
 interface ImonialProps {
   mode?: 'light' | 'dark';
@@ -165,7 +166,7 @@ export default function Imonial({ mode = 'dark' }: ImonialProps) {
           className="mb-12 text-center font-mono text-2xl font-medium"
           style={{ color: colors.text }}
         >
-          Activities & Projects
+          <AuroraText>Activities</AuroraText> & Projects
         </h2>
 
         {/* Three Column Layout */}
