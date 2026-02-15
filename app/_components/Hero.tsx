@@ -44,6 +44,8 @@ const CONTENT = {
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { DockDemo } from './DockDemo';
+import { Highlighter } from '@/components/ui/highlighter';
+import { VideoText } from '@/components/ui/video-text';
 
 interface HeroProps {
   mode?: 'light' | 'dark';
@@ -87,7 +89,9 @@ export default function Hero({ mode = 'dark' }: HeroProps) {
           className="mb-4 text-center font-mono text-2xl font-medium md:text-3xl"
           style={{ color: colors.text }}
         >
-          {CONTENT.subtitle}
+          <Highlighter action="underline" color="#d19b75">
+            {CONTENT.subtitle}
+          </Highlighter>
         </h1>
 
         {/* Description */}
@@ -104,12 +108,17 @@ export default function Hero({ mode = 'dark' }: HeroProps) {
         </div>
 
         {/* Tech Stack */}
-        <div className="text-center overflow-hidden">
+        <div className="relative text-center overflow-hidden">
           <h3
-            className="mb-6 font-mono text-base md:text-lg font-medium"
+            className="relative mb-6 font-mono text-base md:text-lg font-medium h-12 md:h-16"
             style={{ color: colors.text }}
           >
-            Main Tech
+            <VideoText
+              src="https://cdn.magicui.design/ocean-small.webm"
+              fontSize="4vw"
+            >
+              Main Tech
+            </VideoText>
           </h3>
           <div className="mb-8 flex justify-center overflow-x-auto px-2">
             {/* eslint-disable-next-line @next/next/no-img-element */}
