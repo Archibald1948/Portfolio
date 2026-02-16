@@ -38,6 +38,7 @@ export default function RootLayout({
           rel="stylesheet"
           type="text/css"
         />
+        <base target="_blank" rel="noopener noreferrer" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
