@@ -141,7 +141,6 @@ export default function OpenSource({ mode = 'dark' }: OpenSourceProps) {
                 </div>
                 <Link
                   href={org.link}
-                  target="_blank"
                   className="transition-opacity hover:opacity-80 shrink-0"
                   style={{ color: colors.textMuted }}
                 >
@@ -171,7 +170,6 @@ export default function OpenSource({ mode = 'dark' }: OpenSourceProps) {
                       {project.prLink && (
                         <Link
                           href={project.prLink}
-                          target="_blank"
                           className="flex items-center gap-1 sm:gap-1.5 rounded-md px-2 sm:px-3 py-1 sm:py-1.5 font-mono text-[10px] sm:text-xs transition-opacity hover:opacity-80"
                           style={{
                             backgroundColor: '#22C55E20',
@@ -185,7 +183,6 @@ export default function OpenSource({ mode = 'dark' }: OpenSourceProps) {
                       {project.issueLink && (
                         <Link
                           href={project.issueLink}
-                          target="_blank"
                           className="flex items-center gap-1 sm:gap-1.5 rounded-md px-2 sm:px-3 py-1 sm:py-1.5 font-mono text-[10px] sm:text-xs transition-opacity hover:opacity-80"
                           style={{
                             backgroundColor: '#8B5CF620',
@@ -199,7 +196,6 @@ export default function OpenSource({ mode = 'dark' }: OpenSourceProps) {
                       {'graphsLink' in project && project.graphsLink && (
                         <Link
                           href={project.graphsLink}
-                          target="_blank"
                           className="flex items-center gap-1 sm:gap-1.5 rounded-md px-2 sm:px-3 py-1 sm:py-1.5 font-mono text-[10px] sm:text-xs transition-opacity hover:opacity-80"
                           style={{
                             backgroundColor: '#F9731620',
@@ -227,7 +223,6 @@ export default function OpenSource({ mode = 'dark' }: OpenSourceProps) {
           <Link
             className="font-tossface text-sm text-amber-50 hover:opacity-80"
             href="https://github.com/opensource-contributors-group/opensource-contributors"
-            target="_blank"
           >
             🔗 Repository
           </Link>

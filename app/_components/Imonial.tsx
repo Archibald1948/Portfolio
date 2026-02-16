@@ -150,7 +150,7 @@ export default function Imonial({ mode = 'dark' }: ImonialProps) {
     );
 
     return item.link ? (
-      <Link key={index} href={item.link} target="_blank" className="block">
+      <Link key={index} href={item.link} className="block">
         {CardContent}
       </Link>
     ) : (

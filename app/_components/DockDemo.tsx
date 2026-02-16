@@ -24,7 +24,6 @@ export function DockDemo() {
         <DockIcon>
           <Link
             href={LINKS.github}
-            target="_blank"
             className="flex items-center justify-center"
           >
             <Icons.gitHub className="size-6" />
@@ -33,7 +32,6 @@ export function DockDemo() {
         <DockIcon>
           <Link
             href={LINKS.linkedin}
-            target="_blank"
             className="flex items-center justify-center"
           >
             <Icons.linkedIn className="size-6" />
