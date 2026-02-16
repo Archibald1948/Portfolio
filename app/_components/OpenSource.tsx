@@ -75,6 +75,10 @@ const CONTRIBUTIONS = {
   ],
 } as const;
 
+const MEETING = {
+  link: 'https://github.com/opensource-contributors-group/opensource-contributors',
+} as const;
+
 // ============================================================================
 // END CUSTOMIZATION
 // ============================================================================
@@ -222,7 +226,7 @@ export default function OpenSource({ mode = 'dark' }: OpenSourceProps) {
           </p>
           <Link
             className="font-tossface text-sm text-amber-50 hover:opacity-80"
-            href="https://github.com/opensource-contributors-group/opensource-contributors"
+            href={MEETING.link}
           >
             🔗 Repository
           </Link>
