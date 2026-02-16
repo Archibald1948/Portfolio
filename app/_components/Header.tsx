@@ -4,6 +4,12 @@
 // CUSTOMIZATION
 // ============================================================================
 
+const LINKS = {
+  blog: 'https://codingworld2002.tistory.com',
+  github: 'https://github.com/kss2002',
+  claude: 'https://claude.com/product/claude-code',
+} as const;
+
 const COLORS = {
   light: {
     bg: '#141414',
@@ -114,22 +120,19 @@ export default function Header({ mode = 'dark' }: HeaderProps) {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
           <Link
-            href="https://codingworld2002.tistory.com"
+            href={LINKS.blog}
             className="font-mono text-sm text-[#FAFAFA] transition-colors hover:text-[#d19b75]"
-            target="_blank"
           >
             Blog
           </Link>
           <Link
-            href="https://github.com/kss2002"
+            href={LINKS.github}
             className="font-mono text-sm text-[#FAFAFA] transition-colors hover:text-[#d19b75]"
-            target="_blank"
           >
             GitHub
           </Link>
           <Link
-            href="https://www.anthropic.com/"
-            target="_blank"
+            href={LINKS.claude}
             className="flex items-center gap-1 rounded-md px-2 py-2 font-mono text-sm transition-colors hover:opacity-80"
             style={{
               backgroundColor: '#d19b75',
@@ -192,24 +195,21 @@ export default function Header({ mode = 'dark' }: HeaderProps) {
       >
         <nav className="flex flex-col items-end px-6 pb-6 gap-4">
           <Link
-            href="https://codingworld2002.tistory.com"
+            href={LINKS.blog}
             className="font-mono text-sm text-[#141414] transition-colors hover:text-[#d19b75] py-2"
-            target="_blank"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Blog
           </Link>
           <Link
-            href="https://github.com/kss2002"
+            href={LINKS.github}
             className="font-mono text-sm text-[#141414] transition-colors hover:text-[#d19b75] py-2"
-            target="_blank"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             GitHub
           </Link>
           <Link
-            href="https://www.anthropic.com/"
-            target="_blank"
+            href={LINKS.claude}
             className="flex items-center gap-1 rounded-md px-3 py-2 font-mono text-sm transition-colors hover:opacity-80"
             style={{
               backgroundColor: '#d19b75',
