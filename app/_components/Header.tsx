@@ -61,15 +61,11 @@ export default function Header({ mode = 'dark' }: HeaderProps) {
       }}
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-        {/* Logo with scroll animation - shrinking effect */}
         <Link href="/" className="flex items-center">
           <div className="flex font-mono text-xs leading-tight sm:text-sm md:text-base">
-            {/* k - always visible */}
             <span style={{ color: isMobileMenuOpen ? '#141414' : colors.text }}>
               k
             </span>
-
-            {/* im - fades and collapses on scroll */}
             <span
               className="inline-block overflow-hidden transition-all duration-500 ease-out"
               style={{
@@ -80,13 +76,9 @@ export default function Header({ mode = 'dark' }: HeaderProps) {
             >
               im
             </span>
-
-            {/* s - always visible */}
             <span style={{ color: isMobileMenuOpen ? '#141414' : colors.text }}>
               s
             </span>
-
-            {/* eong - fades and collapses on scroll */}
             <span
               className="inline-block overflow-hidden transition-all duration-500 ease-out"
               style={{
@@ -97,13 +89,9 @@ export default function Header({ mode = 'dark' }: HeaderProps) {
             >
               eong
             </span>
-
-            {/* s - always visible */}
             <span style={{ color: isMobileMenuOpen ? '#141414' : colors.text }}>
               s
             </span>
-
-            {/* u - fades and collapses on scroll */}
             <span
               className="inline-block overflow-hidden transition-all duration-500 ease-out"
               style={{
