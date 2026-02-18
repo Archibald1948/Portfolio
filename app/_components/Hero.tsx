@@ -84,9 +84,17 @@ export default function Hero({ mode = 'dark' }: HeroProps) {
           </pre>
         </div>
 
-        {/* Subtitle */}
+        {/* Subtitle – mobile (no highlight) */}
         <h1
-          className="mb-4 text-center font-mono text-2xl font-medium md:text-3xl"
+          className="mb-4 text-center font-mono text-2xl font-medium md:hidden"
+          style={{ color: colors.text }}
+        >
+          {CONTENT.subtitle}
+        </h1>
+
+        {/* Subtitle – md+ (with highlight) */}
+        <h1
+          className="mb-4 hidden text-center font-mono text-3xl font-medium md:block"
           style={{ color: colors.text }}
         >
           <Highlighter action="underline" color="#d19b75">
