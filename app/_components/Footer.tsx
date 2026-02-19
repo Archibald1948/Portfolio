@@ -18,7 +18,7 @@ const COLORS = {
 } as const;
 
 const CONTENT = {
-  copyright: '© 2025 Kim Seong Su',
+  copyright: '2026 Kim Seong Su',
   links: [
     { label: 'Gist', href: 'https://gist.github.com/kss2002' },
     {
@@ -35,6 +35,7 @@ const CONTENT = {
 // ============================================================================
 
 import Link from 'next/link';
+import { Copyright } from 'lucide-react';
 
 interface FooterProps {
   mode?: 'light' | 'dark';
@@ -64,9 +65,15 @@ export default function Footer({ mode = 'dark' }: FooterProps) {
             ))}
           </nav>
           {/* Copyright */}
-          <p className="font-mono text-sm" style={{ color: colors.textMuted }}>
-            {CONTENT.copyright}
-          </p>
+          <div className="flex items-center gap-2">
+            <p
+              className="font-mono text-sm"
+              style={{ color: colors.textMuted }}
+            >
+              {CONTENT.copyright}
+            </p>
+            <Copyright color="#FAFAFA" />
+          </div>
         </div>
       </div>
     </footer>
