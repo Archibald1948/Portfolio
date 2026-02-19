@@ -13,7 +13,7 @@ const COLORS = {
   dark: {
     bg: '#141414',
     text: '#FAFAFA',
-    textMuted: '#71717A',
+    textMuted: '#FAFAFA',
   },
 } as const;
 
@@ -44,16 +44,14 @@ export default function Footer({ mode = 'dark' }: FooterProps) {
   const colors = COLORS[mode];
 
   return (
-    <footer className="w-full py-12" style={{ backgroundColor: colors.bg }}>
+    <footer
+      className="w-full border-t-2 border-gray-800 py-12"
+      style={{ backgroundColor: colors.bg }}
+    >
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex flex-col items-end gap-4">
-          {/* Copyright */}
-          <p className="font-mono text-sm" style={{ color: colors.textMuted }}>
-            {CONTENT.copyright}
-          </p>
-
           {/* Links */}
-          <nav className="flex flex-col items-end gap-2">
+          <nav className="flex flex-col md:flex-row items-end gap-2">
             {CONTENT.links.map((link, index) => (
               <Link
                 key={index}
@@ -65,6 +63,10 @@ export default function Footer({ mode = 'dark' }: FooterProps) {
               </Link>
             ))}
           </nav>
+          {/* Copyright */}
+          <p className="font-mono text-sm" style={{ color: colors.textMuted }}>
+            {CONTENT.copyright}
+          </p>
         </div>
       </div>
     </footer>
