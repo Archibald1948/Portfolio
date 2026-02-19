@@ -7,6 +7,7 @@
 const LINKS = {
   blog: 'https://codingworld2002.tistory.com',
   github: 'https://github.com/kss2002',
+  magicui: 'https://magicui.design',
   claude: 'https://claude.com/product/claude-code',
 } as const;
 
@@ -120,6 +121,12 @@ export default function Header({ mode = 'dark' }: HeaderProps) {
             GitHub
           </Link>
           <Link
+            href={LINKS.magicui}
+            className="font-mono text-sm text-[#FAFAFA] transition-colors hover:text-[#d19b75]"
+          >
+            MagicUI
+          </Link>
+          <Link
             href={LINKS.claude}
             className="flex items-center gap-1 rounded-md px-2 py-2 font-mono text-sm transition-colors hover:opacity-80"
             style={{
@@ -195,6 +202,13 @@ export default function Header({ mode = 'dark' }: HeaderProps) {
             onClick={() => setIsMobileMenuOpen(false)}
           >
             GitHub
+          </Link>
+          <Link
+            href={LINKS.magicui}
+            className="font-mono text-sm text-[#141414] transition-colors hover:text-[#d19b75] py-2"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            MagicUI
           </Link>
           <Link
             href={LINKS.claude}
