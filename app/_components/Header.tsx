@@ -35,6 +35,7 @@ const COLORS = {
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { AnimatedThemeToggler } from '@/components/ui/animated-theme-toggler';
 
 interface HeaderProps {
   mode?: 'light' | 'dark';
@@ -108,6 +109,7 @@ export default function Header({ mode = 'dark' }: HeaderProps) {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
+          <AnimatedThemeToggler className="text-[#FAFAFA] cursor-pointer hover:text-[#d19b75] transition-colors" />
           <Link
             href={LINKS.blog}
             className="font-mono text-sm text-[#FAFAFA] transition-colors hover:text-[#d19b75]"
