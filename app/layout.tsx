@@ -27,6 +27,21 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <head>
+        {/* FOUC 방지: 페이지 렌더 전에 localStorage 테마를 즉시 적용 */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var theme = localStorage.getItem('theme');
+                  if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.documentElement.classList.add('dark');
+                  }
+                } catch(e) {}
+              })()
+            `,
+          }}
+        />
         <link rel="preconnect" href="https://cdn.jsdelivr.net" />
         <link
           rel="preconnect"
