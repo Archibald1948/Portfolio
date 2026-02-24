@@ -25,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko">
+    <html lang="ko" suppressHydrationWarning>
       <head>
         {/* FOUC 방지: 페이지 렌더 전에 localStorage 테마를 즉시 적용 */}
         <script
