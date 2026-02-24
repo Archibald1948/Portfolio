@@ -4,23 +4,6 @@
 // CUSTOMIZATION
 // ============================================================================
 
-const COLORS = {
-  light: {
-    bg: '#141414',
-    cardBg: '#1C1C1C',
-    text: '#FAFAFA',
-    textMuted: '#A1A1AA',
-    verifiedBadge: '#3B82F6',
-  },
-  dark: {
-    bg: '#141414',
-    cardBg: '#1C1C1C',
-    text: '#FAFAFA',
-    textMuted: '#A1A1AA',
-    verifiedBadge: '#3B82F6',
-  },
-} as const;
-
 const SECTIONS = {
   community: {
     title: '🌍 Community',
@@ -91,10 +74,6 @@ import Link from 'next/link';
 import { ExternalLink } from 'lucide-react';
 import { AuroraText } from '@/components/ui/aurora-text';
 
-interface ImonialProps {
-  mode?: 'light' | 'dark';
-}
-
 interface ActivityItem {
   title: string;
   period: string;
@@ -102,47 +81,27 @@ interface ActivityItem {
   link?: string;
 }
 
-export default function Imonial({ mode = 'dark' }: ImonialProps) {
-  const colors = COLORS[mode];
-
+export default function Imonial() {
   const renderCard = (item: ActivityItem, index: number) => {
     const CardContent = (
-      <div
-        className="rounded-lg p-3 sm:p-4 transition-all hover:scale-[1.02]"
-        style={{ backgroundColor: colors.cardBg }}
-      >
+      <div className="rounded-lg p-3 sm:p-4 bg-card transition-all hover:scale-[1.02]">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
           <div className="flex items-center gap-2 flex-wrap">
-            <h4
-              className="font-mono text-xs sm:text-sm font-medium truncate max-w-[150px] sm:max-w-none"
-              style={{ color: colors.text }}
-            >
+            <h4 className="font-mono text-xs sm:text-sm font-medium truncate max-w-[150px] sm:max-w-none text-foreground">
               {item.title}
             </h4>
             {item.badge && (
-              <span
-                className="rounded-full px-2 py-0.5 font-mono text-[10px] sm:text-xs whitespace-nowrap"
-                style={{
-                  backgroundColor: colors.verifiedBadge,
-                  color: '#FFFFFF',
-                }}
-              >
+              <span className="rounded-full px-2 py-0.5 font-mono text-[10px] sm:text-xs whitespace-nowrap bg-blue-500 text-white">
                 {item.badge}
               </span>
             )}
           </div>
           <div className="flex items-center gap-2">
-            <span
-              className="font-mono text-[10px] sm:text-xs whitespace-nowrap"
-              style={{ color: colors.textMuted }}
-            >
+            <span className="font-mono text-[10px] sm:text-xs whitespace-nowrap text-muted-foreground">
               {item.period}
             </span>
             {item.link && (
-              <ExternalLink
-                className="h-3 w-3 sm:h-3.5 sm:w-3.5 shrink-0"
-                style={{ color: colors.verifiedBadge }}
-              />
+              <ExternalLink className="h-3 w-3 sm:h-3.5 sm:w-3.5 shrink-0 text-blue-500" />
             )}
           </div>
         </div>
@@ -159,13 +118,10 @@ export default function Imonial({ mode = 'dark' }: ImonialProps) {
   };
 
   return (
-    <section className="w-full py-16" style={{ backgroundColor: colors.bg }}>
+    <section className="w-full py-16 bg-background">
       <div className="mx-auto max-w-7xl px-6">
         {/* Section Title */}
-        <h2
-          className="mb-12 text-center font-mono text-2xl font-medium"
-          style={{ color: colors.text }}
-        >
+        <h2 className="mb-12 text-center font-mono text-2xl font-medium text-foreground">
           <AuroraText>Activities</AuroraText> & Projects
         </h2>
 
@@ -174,16 +130,10 @@ export default function Imonial({ mode = 'dark' }: ImonialProps) {
           {/* Community Section */}
           <div>
             <div className="mb-4">
-              <h3
-                className="font-tossface text-lg font-bold"
-                style={{ color: colors.text }}
-              >
+              <h3 className="font-tossface text-lg font-bold text-foreground">
                 {SECTIONS.community.title}
               </h3>
-              <p
-                className="font-mono text-xs"
-                style={{ color: colors.textMuted }}
-              >
+              <p className="font-mono text-xs text-muted-foreground">
                 {SECTIONS.community.subtitle}
               </p>
             </div>
@@ -197,16 +147,10 @@ export default function Imonial({ mode = 'dark' }: ImonialProps) {
           {/* Product Section */}
           <div>
             <div className="mb-4">
-              <h3
-                className="font-tossface text-lg font-bold"
-                style={{ color: colors.text }}
-              >
+              <h3 className="font-tossface text-lg font-bold text-foreground">
                 {SECTIONS.product.title}
               </h3>
-              <p
-                className="font-mono text-xs"
-                style={{ color: colors.textMuted }}
-              >
+              <p className="font-mono text-xs text-muted-foreground">
                 {SECTIONS.product.subtitle}
               </p>
             </div>
@@ -220,16 +164,10 @@ export default function Imonial({ mode = 'dark' }: ImonialProps) {
           {/* Project Section */}
           <div>
             <div className="mb-4">
-              <h3
-                className="font-tossface text-lg font-bold"
-                style={{ color: colors.text }}
-              >
+              <h3 className="font-tossface text-lg font-bold text-foreground">
                 {SECTIONS.project.title}
               </h3>
-              <p
-                className="font-mono text-xs"
-                style={{ color: colors.textMuted }}
-              >
+              <p className="font-mono text-xs text-muted-foreground">
                 {SECTIONS.project.subtitle}
               </p>
             </div>

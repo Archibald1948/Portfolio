@@ -4,25 +4,6 @@
 // CUSTOMIZATION
 // ============================================================================
 
-const COLORS = {
-  light: {
-    bg: '#141414',
-    cardBg: '#1C1C1C',
-    text: '#FAFAFA',
-    textMuted: '#A1A1AA',
-    accentBlue: '#0064FF',
-    accentPurple: '#5a44ff',
-  },
-  dark: {
-    bg: '#141414',
-    cardBg: '#1C1C1C',
-    text: '#FAFAFA',
-    textMuted: '#A1A1AA',
-    accentBlue: '#0064FF',
-    accentPurple: '#5a44ff',
-  },
-} as const;
-
 const CONTRIBUTIONS = {
   organizations: [
     {
@@ -92,27 +73,15 @@ import {
 } from 'lucide-react';
 import { ShineBorder } from '@/components/ui/shine-border';
 
-interface OpenSourceProps {
-  mode?: 'light' | 'dark';
-}
-
-export default function OpenSource({ mode = 'dark' }: OpenSourceProps) {
-  const colors = COLORS[mode];
-
+export default function OpenSource() {
   return (
-    <section className="w-full py-16" style={{ backgroundColor: colors.bg }}>
+    <section className="w-full py-16 bg-background">
       <div className="mx-auto max-w-7xl px-6">
         {/* Section Title */}
-        <h2
-          className="mb-4 text-center font-mono text-2xl font-medium"
-          style={{ color: colors.text }}
-        >
+        <h2 className="mb-4 text-center font-mono text-2xl font-medium text-foreground">
           Open Source Contributions
         </h2>
-        <p
-          className="mb-12 text-center font-mono text-sm"
-          style={{ color: colors.textMuted }}
-        >
+        <p className="mb-12 text-center font-mono text-sm text-muted-foreground">
           Contributing to the community, one PR at a time.
         </p>
 
@@ -121,16 +90,12 @@ export default function OpenSource({ mode = 'dark' }: OpenSourceProps) {
           {CONTRIBUTIONS.organizations.map((org, index) => (
             <div
               key={index}
-              className="rounded-lg p-4 shadow-sm shadow-white sm:p-6 transition-all hover:scale-[1.01]"
-              style={{ backgroundColor: colors.cardBg }}
+              className="rounded-lg p-4 bg-card shadow-sm shadow-white sm:p-6 transition-all hover:scale-[1.01]"
             >
               {/* Organization Header */}
               <div className="mb-4 sm:mb-6 flex items-center justify-between gap-2">
                 <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
-                  <h3
-                    className="font-mono text-lg sm:text-xl font-bold"
-                    style={{ color: colors.text }}
-                  >
+                  <h3 className="font-mono text-lg sm:text-xl font-bold text-foreground">
                     {org.name}
                   </h3>
                   <span
@@ -145,8 +110,7 @@ export default function OpenSource({ mode = 'dark' }: OpenSourceProps) {
                 </div>
                 <Link
                   href={org.link}
-                  className="transition-opacity hover:opacity-80 shrink-0"
-                  style={{ color: colors.textMuted }}
+                  className="transition-opacity hover:opacity-80 shrink-0 text-muted-foreground"
                 >
                   <ExternalLink className="h-4 w-4 sm:h-5 sm:w-5" />
                 </Link>
@@ -157,17 +121,13 @@ export default function OpenSource({ mode = 'dark' }: OpenSourceProps) {
                 {org.projects.map((project, pIndex) => (
                   <div
                     key={pIndex}
-                    className="relative rounded-md border p-3 sm:p-4"
-                    style={{ borderColor: '#3F3F46' }}
+                    className="relative rounded-md border border-border p-3 sm:p-4"
                   >
                     <ShineBorder
                       shineColor={['#A07CFE', '#FE8FB5', '#FFBE7B']}
                       borderWidth={2}
                     />
-                    <h4
-                      className="mb-2 sm:mb-3 font-mono text-xs sm:text-sm font-medium"
-                      style={{ color: colors.text }}
-                    >
+                    <h4 className="mb-2 sm:mb-3 font-mono text-xs sm:text-sm font-medium text-foreground">
                       {project.name}
                     </h4>
                     <div className=" flex flex-wrap gap-2 sm:gap-3">
@@ -220,7 +180,7 @@ export default function OpenSource({ mode = 'dark' }: OpenSourceProps) {
 
         {/* Community Note */}
         <div className="mt-12 text-center">
-          <p className="font-mono text-xs" style={{ color: colors.textMuted }}>
+          <p className="font-mono text-xs text-muted-foreground">
             Also participated in 오픈소스기여 모임 10기 (2025.12.26 ~
             2026.01.25)
           </p>

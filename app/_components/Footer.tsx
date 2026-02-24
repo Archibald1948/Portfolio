@@ -4,19 +4,6 @@
 // CUSTOMIZATION
 // ============================================================================
 
-const COLORS = {
-  light: {
-    bg: '#141414',
-    text: '#FAFAFA',
-    textMuted: '#71717A',
-  },
-  dark: {
-    bg: '#141414',
-    text: '#FAFAFA',
-    textMuted: '#FAFAFA',
-  },
-} as const;
-
 const CONTENT = {
   copyright: '2026 Kim Seong Su',
   links: [
@@ -37,18 +24,9 @@ const CONTENT = {
 import Link from 'next/link';
 import { Copyright } from 'lucide-react';
 
-interface FooterProps {
-  mode?: 'light' | 'dark';
-}
-
-export default function Footer({ mode = 'dark' }: FooterProps) {
-  const colors = COLORS[mode];
-
+export default function Footer() {
   return (
-    <footer
-      className="w-full border-t-2 border-gray-800 py-12"
-      style={{ backgroundColor: colors.bg }}
-    >
+    <footer className="w-full border-t-2 border-border py-12 bg-background">
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex flex-col items-end gap-4">
           {/* Links */}
@@ -57,8 +35,7 @@ export default function Footer({ mode = 'dark' }: FooterProps) {
               <Link
                 key={index}
                 href={link.href}
-                className="font-mono text-sm transition-colors hover:opacity-80"
-                style={{ color: colors.textMuted }}
+                className="font-mono text-sm text-muted-foreground transition-colors hover:opacity-80"
               >
                 {link.label}
               </Link>
@@ -66,13 +43,10 @@ export default function Footer({ mode = 'dark' }: FooterProps) {
           </nav>
           {/* Copyright */}
           <div className="flex items-center gap-2">
-            <p
-              className="font-mono text-sm"
-              style={{ color: colors.textMuted }}
-            >
+            <p className="font-mono text-sm text-muted-foreground">
               {CONTENT.copyright}
             </p>
-            <Copyright color="#FAFAFA" />
+            <Copyright className="h-4 w-4 text-foreground" />
           </div>
         </div>
       </div>

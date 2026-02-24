@@ -4,29 +4,6 @@
 // CUSTOMIZATION
 // ============================================================================
 
-const COLORS = {
-  light: {
-    bg: '#141414',
-    text: '#FAFAFA',
-    textMuted: '#A1A1AA',
-    buttonPrimaryBg: '#FAFAFA',
-    buttonPrimaryText: '#141414',
-    buttonSecondaryBg: 'transparent',
-    buttonSecondaryText: '#FAFAFA',
-    buttonSecondaryBorder: '#3F3F46',
-  },
-  dark: {
-    bg: '#141414',
-    text: '#FAFAFA',
-    textMuted: '#A1A1AA',
-    buttonPrimaryBg: '#FAFAFA',
-    buttonPrimaryText: '#141414',
-    buttonSecondaryBg: 'transparent',
-    buttonSecondaryText: '#FAFAFA',
-    buttonSecondaryBorder: '#3F3F46',
-  },
-} as const;
-
 const CONTENT = {
   badge: 'TIL',
   title: 'KIM SEONG SU',
@@ -47,25 +24,15 @@ import { DockDemo } from './DockDemo';
 import { Highlighter } from '@/components/ui/highlighter';
 import { VideoText } from '@/components/ui/video-text';
 
-interface HeroProps {
-  mode?: 'light' | 'dark';
-}
-
-export default function Hero({ mode = 'dark' }: HeroProps) {
-  const colors = COLORS[mode];
-
+export default function Hero() {
   return (
-    <section
-      className="relative w-full pt-24 pb-16"
-      style={{ backgroundColor: colors.bg }}
-    >
+    <section className="relative w-full pt-24 pb-16 bg-background">
       <div className="mx-auto max-w-7xl px-6">
         {/* Version Badge */}
         <div className="mb-8 flex justify-center">
           <Link
             href="https://github.com/kss2002/TIL"
-            className="inline-flex items-center gap-2 font-mono text-sm transition-colors hover:opacity-80"
-            style={{ color: colors.textMuted }}
+            className="inline-flex items-center gap-2 font-mono text-sm text-muted-foreground transition-colors hover:opacity-80"
           >
             {CONTENT.badge}
             <ArrowRight className="h-4 w-4" />
@@ -74,10 +41,7 @@ export default function Hero({ mode = 'dark' }: HeroProps) {
 
         {/* ASCII Art Title */}
         <div className="mb-8 flex justify-center overflow-hidden px-2">
-          <pre
-            className="font-mono text-[8px] leading-tight xs:text-[10px] sm:text-sm md:text-base text-center whitespace-pre scale-[0.85] sm:scale-100 origin-center"
-            style={{ color: colors.text }}
-          >
+          <pre className="font-mono text-[8px] leading-tight xs:text-[10px] sm:text-sm md:text-base text-center whitespace-pre scale-[0.85] sm:scale-100 origin-center text-foreground">
             {`░█▀▄░█▀▀░█░█░█▀▀░█░░░█▀█░█▀█░█▀▀░█▀▄
 ░█░█░█▀▀░▀▄▀░█▀▀░█░░░█░█░█▀▀░█▀▀░█▀▄
 ░▀▀░░▀▀▀░░▀░░▀▀▀░▀▀▀░▀▀▀░▀░░░▀▀▀░▀░▀`}
@@ -85,28 +49,19 @@ export default function Hero({ mode = 'dark' }: HeroProps) {
         </div>
 
         {/* Subtitle – mobile (no highlight) */}
-        <h1
-          className="mb-4 text-center font-mono text-2xl font-medium md:hidden"
-          style={{ color: colors.text }}
-        >
+        <h1 className="mb-4 text-center font-mono text-2xl font-medium md:hidden text-foreground">
           {CONTENT.subtitle}
         </h1>
 
         {/* Subtitle – md+ (with highlight) */}
-        <h1
-          className="mb-4 hidden text-center font-mono text-3xl font-medium md:block"
-          style={{ color: colors.text }}
-        >
+        <h1 className="mb-4 hidden text-center font-mono text-3xl font-medium md:block text-foreground">
           <Highlighter action="underline" color="#d19b75">
             {CONTENT.subtitle}
           </Highlighter>
         </h1>
 
         {/* Description */}
-        <p
-          className="mx-auto mb-8 max-w-2xl text-center font-mono text-sm leading-relaxed md:text-base"
-          style={{ color: colors.textMuted }}
-        >
+        <p className="mx-auto mb-8 max-w-2xl text-center font-mono text-sm leading-relaxed md:text-base text-muted-foreground">
           {CONTENT.description}
         </p>
 
@@ -117,10 +72,7 @@ export default function Hero({ mode = 'dark' }: HeroProps) {
 
         {/* Tech Stack */}
         <div className="relative text-center overflow-hidden">
-          <h3
-            className="relative mb-6 font-mono text-base md:text-lg font-medium h-12 md:h-16"
-            style={{ color: colors.text }}
-          >
+          <h3 className="relative mb-6 font-mono text-base md:text-lg font-medium h-12 md:h-16 text-foreground">
             <VideoText
               src="https://cdn.magicui.design/ocean-small.webm"
               fontSize="4vw"
@@ -136,10 +88,7 @@ export default function Hero({ mode = 'dark' }: HeroProps) {
               className="h-10 sm:h-12 md:h-16 max-w-full object-contain"
             />
           </div>
-          <h3
-            className="mb-6 font-mono text-base md:text-lg font-medium"
-            style={{ color: colors.text }}
-          >
+          <h3 className="mb-6 font-mono text-base md:text-lg font-medium text-foreground">
             Tools & Sub Tech
           </h3>
           <div className="flex flex-col items-center gap-3 sm:gap-4 overflow-x-auto px-2">

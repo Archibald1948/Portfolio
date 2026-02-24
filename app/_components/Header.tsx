@@ -11,23 +11,6 @@ const LINKS = {
   claude: 'https://claude.com/product/claude-code',
 } as const;
 
-const COLORS = {
-  light: {
-    bg: '#141414',
-    text: '#FAFAFA',
-    textMuted: '#A1A1AA',
-    buttonBg: '#FAFAFA',
-    buttonText: '#141414',
-  },
-  dark: {
-    bg: '#141414',
-    text: '#FAFAFA',
-    textMuted: '#A1A1AA',
-    buttonBg: '#FAFAFA',
-    buttonText: '#141414',
-  },
-} as const;
-
 // ============================================================================
 // END CUSTOMIZATION
 // ============================================================================
@@ -37,12 +20,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { AnimatedThemeToggler } from '@/components/ui/animated-theme-toggler';
 
-interface HeaderProps {
-  mode?: 'light' | 'dark';
-}
-
-export default function Header({ mode = 'dark' }: HeaderProps) {
-  const colors = COLORS[mode];
+export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -56,48 +34,34 @@ export default function Header({ mode = 'dark' }: HeaderProps) {
   }, []);
 
   return (
-    <header
-      className="fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 border-b-2 border-double border-[#d19b75]"
-      style={{
-        backgroundColor: isMobileMenuOpen ? '#FAFAFA' : colors.bg,
-      }}
-    >
+    <header className="fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 border-b-2 border-double border-[#d19b75] bg-background">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         <Link href="/" className="flex items-center">
           <div className="flex font-mono text-xs leading-tight sm:text-sm md:text-base">
-            <span style={{ color: isMobileMenuOpen ? '#141414' : colors.text }}>
-              k
-            </span>
+            <span className="text-foreground">k</span>
             <span
-              className="inline-block overflow-hidden transition-all duration-500 ease-out"
+              className="inline-block overflow-hidden transition-all duration-500 ease-out text-foreground"
               style={{
-                color: isMobileMenuOpen ? '#141414' : colors.text,
                 maxWidth: isScrolled ? '0px' : '2ch',
                 opacity: isScrolled ? 0 : 1,
               }}
             >
               im
             </span>
-            <span style={{ color: isMobileMenuOpen ? '#141414' : colors.text }}>
-              s
-            </span>
+            <span className="text-foreground">s</span>
             <span
-              className="inline-block overflow-hidden transition-all duration-500 ease-out"
+              className="inline-block overflow-hidden transition-all duration-500 ease-out text-foreground"
               style={{
-                color: isMobileMenuOpen ? '#141414' : colors.text,
                 maxWidth: isScrolled ? '0px' : '4ch',
                 opacity: isScrolled ? 0 : 1,
               }}
             >
               eong
             </span>
-            <span style={{ color: isMobileMenuOpen ? '#141414' : colors.text }}>
-              s
-            </span>
+            <span className="text-foreground">s</span>
             <span
-              className="inline-block overflow-hidden transition-all duration-500 ease-out"
+              className="inline-block overflow-hidden transition-all duration-500 ease-out text-foreground"
               style={{
-                color: isMobileMenuOpen ? '#141414' : colors.text,
                 maxWidth: isScrolled ? '0px' : '1ch',
                 opacity: isScrolled ? 0 : 1,
               }}
@@ -109,22 +73,22 @@ export default function Header({ mode = 'dark' }: HeaderProps) {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
-          <AnimatedThemeToggler className="text-[#FAFAFA] cursor-pointer hover:text-[#d19b75] transition-colors" />
+          <AnimatedThemeToggler className="text-foreground cursor-pointer hover:text-[#d19b75] transition-colors" />
           <Link
             href={LINKS.blog}
-            className="font-mono text-sm text-[#FAFAFA] transition-colors hover:text-[#d19b75]"
+            className="font-mono text-sm text-foreground transition-colors hover:text-[#d19b75]"
           >
             Blog
           </Link>
           <Link
             href={LINKS.github}
-            className="font-mono text-sm text-[#FAFAFA] transition-colors hover:text-[#d19b75]"
+            className="font-mono text-sm text-foreground transition-colors hover:text-[#d19b75]"
           >
             GitHub
           </Link>
           <Link
             href={LINKS.magicui}
-            className="font-mono text-sm text-[#FAFAFA] transition-colors hover:text-[#d19b75]"
+            className="font-mono text-sm text-foreground transition-colors hover:text-[#d19b75]"
           >
             MagicUI
           </Link>
@@ -156,7 +120,7 @@ export default function Header({ mode = 'dark' }: HeaderProps) {
           <span
             className="absolute block w-4 h-[2px] transition-all duration-300 ease-out"
             style={{
-              backgroundColor: isMobileMenuOpen ? '#141414' : '#FAFAFA',
+              backgroundColor: 'var(--foreground)',
               transform: isMobileMenuOpen
                 ? 'rotate(45deg)'
                 : 'translateY(-4px)',
@@ -165,14 +129,14 @@ export default function Header({ mode = 'dark' }: HeaderProps) {
           <span
             className="absolute block w-4 h-[2px] transition-all duration-300 ease-out"
             style={{
-              backgroundColor: isMobileMenuOpen ? '#141414' : '#FAFAFA',
+              backgroundColor: 'var(--foreground)',
               opacity: isMobileMenuOpen ? 0 : 1,
             }}
           />
           <span
             className="absolute block w-4 h-[2px] transition-all duration-300 ease-out"
             style={{
-              backgroundColor: isMobileMenuOpen ? '#141414' : '#FAFAFA',
+              backgroundColor: 'var(--foreground)',
               transform: isMobileMenuOpen
                 ? 'rotate(-45deg)'
                 : 'translateY(4px)',
@@ -187,27 +151,26 @@ export default function Header({ mode = 'dark' }: HeaderProps) {
         style={{
           maxHeight: isMobileMenuOpen ? '300px' : '0px',
           opacity: isMobileMenuOpen ? 1 : 0,
-          backgroundColor: '#FAFAFA',
         }}
       >
-        <nav className="flex flex-col items-end px-6 pb-6 gap-4">
+        <nav className="flex flex-col items-end px-6 pb-6 gap-4 bg-background">
           <Link
             href={LINKS.blog}
-            className="font-mono text-sm text-[#141414] transition-colors hover:text-[#d19b75] py-2"
+            className="font-mono text-sm text-foreground transition-colors hover:text-[#d19b75] py-2"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Blog
           </Link>
           <Link
             href={LINKS.github}
-            className="font-mono text-sm text-[#141414] transition-colors hover:text-[#d19b75] py-2"
+            className="font-mono text-sm text-foreground transition-colors hover:text-[#d19b75] py-2"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             GitHub
           </Link>
           <Link
             href={LINKS.magicui}
-            className="font-mono text-sm text-[#141414] transition-colors hover:text-[#d19b75] py-2"
+            className="font-mono text-sm text-foreground transition-colors hover:text-[#d19b75] py-2"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             MagicUI

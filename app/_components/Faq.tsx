@@ -4,23 +4,6 @@
 // CUSTOMIZATION
 // ============================================================================
 
-const COLORS = {
-  light: {
-    bg: '#141414',
-    text: '#FAFAFA',
-    textMuted: '#A1A1AA',
-    buttonBg: '#FAFAFA',
-    buttonText: '#141414',
-  },
-  dark: {
-    bg: '#141414',
-    text: '#FAFAFA',
-    textMuted: '#A1A1AA',
-    buttonBg: '#FAFAFA',
-    buttonText: '#141414',
-  },
-} as const;
-
 const CONTENT = {
   title: 'About Me',
   faqs: [
@@ -53,36 +36,24 @@ const CONTENT = {
 // END CUSTOMIZATION
 // ============================================================================
 
-interface FaqProps {
-  mode?: 'light' | 'dark';
-}
-
-export default function Faq({ mode = 'dark' }: FaqProps) {
-  const colors = COLORS[mode];
-
+export default function Faq() {
   return (
-    <section className="w-full py-20" style={{ backgroundColor: colors.bg }}>
+    <section className="w-full py-20 bg-background">
       <div className="mx-auto max-w-2xl px-6">
         {/* FAQ Section */}
-        <h2
-          className="mb-8 font-mono text-sm font-medium underline underline-offset-4"
-          style={{ color: colors.text }}
-        >
+        <h2 className="mb-8 font-mono text-sm font-medium underline underline-offset-4 text-foreground">
           {CONTENT.title}
         </h2>
 
         <div className="mb-16 space-y-6">
           {CONTENT.faqs.map((faq, index) => (
             <div key={index}>
-              <h3
-                className="mb-1 font-mono text-sm font-bold"
-                style={{ color: colors.text }}
-              >
+              <h3 className="mb-1 font-mono text-sm font-bold text-foreground">
                 {faq.question}
               </h3>
               <p className="flex gap-2 font-mono text-sm">
-                <span style={{ color: colors.textMuted }}>|_</span>
-                <span style={{ color: colors.textMuted }}>{faq.answer}</span>
+                <span className="text-muted-foreground">|_</span>
+                <span className="text-muted-foreground">{faq.answer}</span>
               </p>
             </div>
           ))}
@@ -90,10 +61,7 @@ export default function Faq({ mode = 'dark' }: FaqProps) {
 
         {/* CTA Section */}
         <div className="text-center">
-          <h3
-            className="mb-1 font-mono text-sm font-bold"
-            style={{ color: colors.text }}
-          >
+          <h3 className="mb-1 font-mono text-sm font-bold text-foreground">
             {CONTENT.cta.title}
           </h3>
         </div>
