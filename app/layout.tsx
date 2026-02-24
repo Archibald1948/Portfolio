@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import Header from './_components/Header';
-import { Particles } from '@/components/ui/particles';
+import ThemeParticles from './_components/ThemeParticles';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -59,17 +59,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
-        <Particles
-          className="fixed inset-0 z-50 pointer-events-none opacity-50"
-          quantity={40}
-          staticity={60}
-          ease={50}
-          size={0.4}
-          refresh={false}
-          color="#ffffff"
-          vx={0}
-          vy={0}
-        />
+        <ThemeParticles />
         {children}
       </body>
     </html>
