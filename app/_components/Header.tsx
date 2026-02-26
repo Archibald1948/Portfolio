@@ -7,6 +7,7 @@
 const LINKS = {
   blog: 'https://codingworld2002.tistory.com',
   github: 'https://github.com/kss2002',
+  tailwind: 'https://tailwindcss.com/',
   magicui: 'https://magicui.design',
   claude: 'https://claude.com/product/claude-code',
 } as const;
@@ -85,6 +86,12 @@ export default function Header() {
             className="font-mono text-sm text-foreground transition-colors hover:text-[#d19b75]"
           >
             GitHub
+          </Link>
+          <Link
+            href={LINKS.tailwind}
+            className="font-mono text-sm text-foreground transition-colors hover:text-[#d19b75]"
+          >
+            Tailwind
           </Link>
           <Link
             href={LINKS.magicui}
@@ -168,6 +175,13 @@ export default function Header() {
               onClick={() => setIsMobileMenuOpen(false)}
             >
               GitHub
+            </Link>
+            <Link
+              href={LINKS.tailwind}
+              className="font-mono text-sm text-foreground transition-colors hover:text-[#d19b75] py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Tailwind
             </Link>
             <Link
               href={LINKS.magicui}
