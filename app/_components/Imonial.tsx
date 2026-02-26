@@ -84,7 +84,7 @@ interface ActivityItem {
 export default function Imonial() {
   const renderCard = (item: ActivityItem, index: number) => {
     const CardContent = (
-      <div className="rounded-lg p-3 sm:p-4 bg-card transition-all hover:scale-[1.02]">
+      <div className="rounded-lg p-3 sm:p-4 bg-card border border-border transition-all hover:scale-[1.02]">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
           <div className="flex items-center gap-2 flex-wrap">
             <h4 className="font-mono text-xs sm:text-sm font-medium truncate max-w-[150px] sm:max-w-none text-foreground">

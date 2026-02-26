@@ -90,7 +90,7 @@ export default function OpenSource() {
           {CONTRIBUTIONS.organizations.map((org, index) => (
             <div
               key={index}
-              className="rounded-lg p-4 bg-card shadow-sm shadow-white sm:p-6 transition-all hover:scale-[1.01]"
+              className="rounded-lg p-4 bg-card shadow-sm shadow-foreground/10 sm:p-6 transition-all hover:scale-[1.01]"
             >
               {/* Organization Header */}
               <div className="mb-4 sm:mb-6 flex items-center justify-between gap-2">
@@ -185,7 +185,7 @@ export default function OpenSource() {
             2026.01.25)
           </p>
           <Link
-            className="font-tossface text-sm text-amber-50 hover:opacity-80"
+            className="font-tossface text-sm text-foreground hover:opacity-80"
             href={MEETING.link}
           >
             🔗 Repository
