@@ -154,45 +154,50 @@ export default function Header() {
         }}
       >
         <nav className="flex flex-col items-end px-6 pb-6 gap-4 bg-background">
-          <Link
-            href={LINKS.blog}
-            className="font-mono text-sm text-foreground transition-colors hover:text-[#d19b75] py-2"
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            Blog
-          </Link>
-          <Link
-            href={LINKS.github}
-            className="font-mono text-sm text-foreground transition-colors hover:text-[#d19b75] py-2"
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            GitHub
-          </Link>
-          <Link
-            href={LINKS.magicui}
-            className="font-mono text-sm text-foreground transition-colors hover:text-[#d19b75] py-2"
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            MagicUI
-          </Link>
-          <Link
-            href={LINKS.claude}
-            className="flex items-center gap-1 rounded-md px-3 py-2 font-mono text-sm transition-colors hover:opacity-80"
-            style={{
-              backgroundColor: '#d19b75',
-              color: '#1A1A1A',
-            }}
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            <Image
-              src="/anthropic.png"
-              alt="Anthropic"
-              width={24}
-              height={24}
-              className="rounded-sm"
-            />
-            Claude
-          </Link>
+          <div className="flex items-end gap-4">
+            <Link
+              href={LINKS.blog}
+              className="font-mono text-sm text-foreground transition-colors hover:text-[#d19b75] py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Blog
+            </Link>
+            <Link
+              href={LINKS.github}
+              className="font-mono text-sm text-foreground transition-colors hover:text-[#d19b75] py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              GitHub
+            </Link>
+            <Link
+              href={LINKS.magicui}
+              className="font-mono text-sm text-foreground transition-colors hover:text-[#d19b75] py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              MagicUI
+            </Link>
+          </div>
+          <div className="flex items-center gap-4">
+            <AnimatedThemeToggler className="text-foreground cursor-pointer hover:text-[#d19b75] transition-colors" />
+            <Link
+              href={LINKS.claude}
+              className="flex items-center gap-1 rounded-md px-3 py-2 font-mono text-sm transition-colors hover:opacity-80"
+              style={{
+                backgroundColor: '#d19b75',
+                color: '#1A1A1A',
+              }}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <Image
+                src="/anthropic.png"
+                alt="Anthropic"
+                width={24}
+                height={24}
+                className="rounded-sm"
+              />
+              Claude
+            </Link>
+          </div>
         </nav>
       </div>
     </header>
