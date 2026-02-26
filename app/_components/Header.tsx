@@ -4,13 +4,12 @@
 // CUSTOMIZATION
 // ============================================================================
 
-const LINKS = {
-  blog: 'https://codingworld2002.tistory.com',
-  github: 'https://github.com/kss2002',
-  tailwind: 'https://tailwindcss.com/',
-  magicui: 'https://magicui.design',
-  claude: 'https://claude.com/product/claude-code',
-} as const;
+const NAV_LINKS = [
+  { label: 'Blog', href: 'https://codingworld2002.tistory.com' },
+  { label: 'GitHub', href: 'https://github.com/kss2002' },
+  { label: 'Tailwind', href: 'https://tailwindcss.com/' },
+  { label: 'MagicUI', href: 'https://magicui.design' },
+] as const;
 
 // ============================================================================
 // END CUSTOMIZATION
@@ -75,32 +74,17 @@ export default function Header() {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
           <AnimatedThemeToggler className="text-foreground cursor-pointer hover:text-[#d19b75] transition-colors" />
+          {NAV_LINKS.map(({ label, href }) => (
+            <Link
+              key={label}
+              href={href}
+              className="font-mono text-sm text-foreground transition-colors hover:text-[#d19b75]"
+            >
+              {label}
+            </Link>
+          ))}
           <Link
-            href={LINKS.blog}
-            className="font-mono text-sm text-foreground transition-colors hover:text-[#d19b75]"
-          >
-            Blog
-          </Link>
-          <Link
-            href={LINKS.github}
-            className="font-mono text-sm text-foreground transition-colors hover:text-[#d19b75]"
-          >
-            GitHub
-          </Link>
-          <Link
-            href={LINKS.tailwind}
-            className="font-mono text-sm text-foreground transition-colors hover:text-[#d19b75]"
-          >
-            Tailwind
-          </Link>
-          <Link
-            href={LINKS.magicui}
-            className="font-mono text-sm text-foreground transition-colors hover:text-[#d19b75]"
-          >
-            MagicUI
-          </Link>
-          <Link
-            href={LINKS.claude}
+            href="https://claude.com/product/claude-code"
             className="flex items-center gap-1 rounded-md px-2 py-2 font-mono text-sm transition-colors hover:opacity-80"
             style={{
               backgroundColor: '#d19b75',
@@ -162,39 +146,21 @@ export default function Header() {
       >
         <nav className="flex flex-col items-end px-6 pb-6 gap-4 bg-background">
           <div className="flex items-end gap-4">
-            <Link
-              href={LINKS.blog}
-              className="font-mono text-sm text-foreground transition-colors hover:text-[#d19b75] py-2"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Blog
-            </Link>
-            <Link
-              href={LINKS.github}
-              className="font-mono text-sm text-foreground transition-colors hover:text-[#d19b75] py-2"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              GitHub
-            </Link>
-            <Link
-              href={LINKS.tailwind}
-              className="font-mono text-sm text-foreground transition-colors hover:text-[#d19b75] py-2"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Tailwind
-            </Link>
-            <Link
-              href={LINKS.magicui}
-              className="font-mono text-sm text-foreground transition-colors hover:text-[#d19b75] py-2"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              MagicUI
-            </Link>
+            {NAV_LINKS.map(({ label, href }) => (
+              <Link
+                key={label}
+                href={href}
+                className="font-mono text-sm text-foreground transition-colors hover:text-[#d19b75] py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {label}
+              </Link>
+            ))}
           </div>
           <div className="flex items-center gap-4">
             <AnimatedThemeToggler className="text-foreground cursor-pointer hover:text-[#d19b75] transition-colors" />
             <Link
-              href={LINKS.claude}
+              href="https://claude.com/product/claude-code"
               className="flex items-center gap-1 rounded-md px-3 py-2 font-mono text-sm transition-colors hover:opacity-80"
               style={{
                 backgroundColor: '#d19b75',
