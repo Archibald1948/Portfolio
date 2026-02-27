@@ -1,9 +1,5 @@
 'use client';
 
-// ============================================================================
-// CUSTOMIZATION
-// ============================================================================
-
 const CONTENT = {
   badge: 'TIL',
   title: 'KIM SEONG SU',
@@ -13,10 +9,6 @@ const CONTENT = {
   primaryCta: 'View GitHub',
   secondaryCta: 'Contact Me',
 } as const;
-
-// ============================================================================
-// END CUSTOMIZATION
-// ============================================================================
 
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
