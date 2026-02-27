@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Devloper',
+  title: 'Frontend Developer',
   description: 'It embodies imagination in code.',
 };
 
