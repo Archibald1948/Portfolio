@@ -1,19 +1,11 @@
 'use client';
 
-// ============================================================================
-// CUSTOMIZATION
-// ============================================================================
-
 const NAV_LINKS = [
   { label: 'Blog', href: 'https://codingworld2002.tistory.com' },
   { label: 'GitHub', href: 'https://github.com/kss2002' },
   { label: 'Tailwind', href: 'https://tailwindcss.com/' },
   { label: 'MagicUI', href: 'https://magicui.design' },
 ] as const;
-
-// ============================================================================
-// END CUSTOMIZATION
-// ============================================================================
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
