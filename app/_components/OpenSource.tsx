@@ -1,9 +1,5 @@
 'use client';
 
-// ============================================================================
-// CUSTOMIZATION
-// ============================================================================
-
 const CONTRIBUTIONS = {
   organizations: [
     {
@@ -59,10 +55,6 @@ const CONTRIBUTIONS = {
 const MEETING = {
   link: 'https://github.com/opensource-contributors-group/opensource-contributors',
 } as const;
-
-// ============================================================================
-// END CUSTOMIZATION
-// ============================================================================
 
 import Link from 'next/link';
 import {
