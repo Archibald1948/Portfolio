@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { Home } from 'lucide-react';
+import { HyperText } from '@/components/ui/hyper-text';
 
 export default function NotFound() {
   return (
@@ -17,7 +18,7 @@ export default function NotFound() {
 
       {/* Title */}
       <h1 className="mb-4 text-center font-mono text-3xl font-bold md:text-5xl text-foreground">
-        Page Not Found
+        <HyperText>Page Not Found</HyperText>
       </h1>
 
       {/* Description */}
