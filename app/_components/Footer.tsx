@@ -1,9 +1,5 @@
 'use client';
 
-// ============================================================================
-// CUSTOMIZATION
-// ============================================================================
-
 const CONTENT = {
   copyright: '2026 Kim Seong Su',
   links: [
@@ -16,10 +12,6 @@ const CONTENT = {
     { label: 'Naver', href: 'mailto:sc00310@naver.com' },
   ],
 } as const;
-
-// ============================================================================
-// END CUSTOMIZATION
-// ============================================================================
 
 import Link from 'next/link';
 import { Copyright } from 'lucide-react';
