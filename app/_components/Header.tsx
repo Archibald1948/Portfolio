@@ -11,6 +11,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { AnimatedThemeToggler } from '@/components/ui/animated-theme-toggler';
+import { HyperText } from '@/components/ui/hyper-text';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -67,12 +68,10 @@ export default function Header() {
         <nav className="hidden md:flex items-center gap-8">
           <AnimatedThemeToggler className="text-foreground cursor-pointer hover:text-[#d19b75] transition-colors" />
           {NAV_LINKS.map(({ label, href }) => (
-            <Link
-              key={label}
-              href={href}
-              className="font-mono text-sm text-foreground transition-colors hover:text-[#d19b75]"
-            >
-              {label}
+            <Link key={label} href={href}>
+              <HyperText className="font-mono text-sm text-foreground transition-colors hover:text-[#d19b75]">
+                {label}
+              </HyperText>
             </Link>
           ))}
           <Link
