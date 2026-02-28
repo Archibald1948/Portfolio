@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion, MotionProps } from 'motion/react';
 
 import { cn } from '@/lib/utils';
@@ -30,6 +30,27 @@ const DEFAULT_CHARACTER_SET = Object.freeze(
   'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'.split(''),
 ) as readonly string[];
 
+const motionTagMap = {
+  div: motion.div,
+  span: motion.span,
+  p: motion.p,
+  h1: motion.h1,
+  h2: motion.h2,
+  h3: motion.h3,
+  h4: motion.h4,
+  h5: motion.h5,
+  h6: motion.h6,
+  section: motion.section,
+  article: motion.article,
+  li: motion.li,
+  ul: motion.ul,
+  ol: motion.ol,
+  a: motion.a,
+  button: motion.button,
+  nav: motion.nav,
+  label: motion.label,
+} as const;
+
 const getRandomInt = (max: number): number => Math.floor(Math.random() * max);
 
 export function HyperText({
@@ -43,10 +64,11 @@ export function HyperText({
   characterSet = DEFAULT_CHARACTER_SET,
   ...props
 }: HyperTextProps) {
-  const MotionComponent = useMemo(
-    () => motion.create(Component, { forwardMotionProps: true }),
-    [Component],
-  );
+  const MotionComponent = (
+    typeof Component === 'string' && Component in motionTagMap
+      ? motionTagMap[Component as keyof typeof motionTagMap]
+      : motion.div
+  ) as typeof motion.div;
 
   const [displayText, setDisplayText] = useState<string[]>(() =>
     children.split(''),
@@ -128,7 +150,7 @@ export function HyperText({
 
   return (
     <MotionComponent
-      ref={elementRef}
+      ref={elementRef as React.Ref<HTMLDivElement>}
       className={cn('overflow-hidden py-2 text-4xl font-bold', className)}
       onMouseEnter={handleAnimationTrigger}
       {...props}
