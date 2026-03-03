@@ -1,8 +1,12 @@
-'use client';
-
 import Link from 'next/link';
+import { Metadata } from 'next';
 import { Home } from 'lucide-react';
 import { HyperText } from '@/components/ui/hyper-text';
+
+export const metadata: Metadata = {
+  title: '404 - Page Not Found',
+  description: 'The page you are looking for does not exist.',
+};
 
 export default function NotFound() {
   return (
