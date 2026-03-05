@@ -19,7 +19,7 @@ const SECTIONS = {
       {
         title: 'ShortsGen',
         period: 'Active',
-        badge: null,
+        badge: '대모산 개발단',
         link: 'https://shorts-demodev.vercel.app',
       },
     ],
