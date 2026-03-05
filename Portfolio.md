@@ -15,6 +15,8 @@
 ### Product Activities
 
 - **ShortsGen** [🚀 Site](https://shorts-demodev.vercel.app)
+- **Pomodoro** [🚀GitHub](https://github.com/kss2002/pomodoro)
+- **Samsika** [🚀GitHub](https://github.com/kss2002/ThreeSix)
 
 ### Project Activities
 
@@ -28,6 +30,8 @@
   [🔗 GitHub](https://github.com/kss2002/roasis-front)
 - **멋쟁이사자처럼 간지톤** `2025.11.01 ~ 11.22` / `팀장`  
   [🔗 GitHub](https://github.com/kss2002/SCamp)
+- **GDG onewave 해거톤** `2026.02.06 ~ 02.07`
+  [🔗 GitHub](https://github.com/jihongeek/onewave-t17-fe)
 
 <div align="left">
 
