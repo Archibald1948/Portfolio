@@ -22,6 +22,18 @@ const SECTIONS = {
         badge: '대모산 개발단',
         link: 'https://shorts-demodev.vercel.app',
       },
+      {
+        title: 'Pomodoro',
+        period: '2025.12 ~ 2026.01',
+        badge: '개인 프로젝트',
+        link: 'https://github.com/kss2002/pomodoro',
+      },
+      {
+        title: 'Samsika',
+        period: '2024.10 ~ 2025.12',
+        badge: '아이디어톤',
+        link: 'https://github.com/kss2002/ThreeSix',
+      },
     ],
   },
   project: {
@@ -57,6 +69,12 @@ const SECTIONS = {
         period: '2025.11.01 ~ 11.22',
         badge: '팀장',
         link: 'https://github.com/kss2002/SCamp',
+      },
+      {
+        title: 'GDG onewave 해거톤',
+        period: '2026.02.06 ~ 02.07',
+        badge: null,
+        link: 'https://github.com/jihongeek/onewave-t17-fe',
       },
     ],
   },
