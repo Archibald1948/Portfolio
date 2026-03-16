@@ -5,7 +5,7 @@ const SECTIONS = {
     title: '🌍 Community',
     subtitle: 'Active member & organizer',
     items: [
-      { title: 'GDG', period: '2024.03 ~ 2025.09', badge: null },
+      { title: 'GDGoC', period: '2024.03 ~ 2025.09', badge: null },
       { title: '카카오 유니브', period: '2024.06 ~ 2024.12', badge: null },
       { title: '카카오 유니브', period: '2025.02 ~ 2025.12', badge: '운영진' },
       { title: '멋쟁이사자처럼', period: '2025.03 ~ 2025.12', badge: null },
