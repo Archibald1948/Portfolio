@@ -4,7 +4,7 @@
 
 ### Community Activities
 
-- **GDG** `2024.03 ~ 2025.09`
+- **GDGoC** `2024.03 ~ 2025.09`
 - **카카오 유니브** `2024.06 ~ 2024.12`
 - **카카오 유니브** `2025.02 ~ 2025.12` 🎖️ `운영진`
 - **멋쟁이사자처럼** `2025.03 ~ 2025.12`
@@ -30,7 +30,7 @@
   [🔗 GitHub](https://github.com/kss2002/roasis-front)
 - **멋쟁이사자처럼 간지톤** `2025.11.01 ~ 11.22` / `팀장`  
   [🔗 GitHub](https://github.com/kss2002/SCamp)
-- **GDG onewave 해거톤** `2026.02.06 ~ 02.07`
+- **GDGoC onewave 해거톤** `2026.02.06 ~ 02.07`
   [🔗 GitHub](https://github.com/jihongeek/onewave-t17-fe)
 
 <div align="left">
