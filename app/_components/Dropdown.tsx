@@ -1,3 +1,10 @@
+const AI_LINKS = [
+  { label: 'Claude', href: 'https://claude.com/product/claude-code' },
+  { label: 'Codex', href: 'https://openai.com/ko-KR/codex/' },
+  { label: 'Antigravity', href: 'https://antigravity.google/' },
+  { label: 'Gemini', href: 'https://geminicli.com/' },
+];
+
 import Link from 'next/link';
 import {
   DropdownMenu,
@@ -6,13 +13,6 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { HyperText } from '@/components/ui/hyper-text';
-
-const AI_LINKS = [
-  { label: 'Claude', href: 'https://claude.com/product/claude-code' },
-  { label: 'Codex', href: 'https://openai.com/ko-KR/codex/' },
-  { label: 'Antigravity', href: 'https://antigravity.google/' },
-  { label: 'Gemini', href: 'https://geminicli.com/' },
-];
 
 export function Dropdown() {
   return (
