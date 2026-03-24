@@ -3,7 +3,7 @@ const AI_LINKS = [
   { label: 'Codex', href: 'https://openai.com/ko-KR/codex/' },
   { label: 'Antigravity', href: 'https://antigravity.google/' },
   { label: 'Gemini', href: 'https://geminicli.com/' },
-];
+] as const;
 
 import Link from 'next/link';
 import {
@@ -16,7 +16,7 @@ import { HyperText } from '@/components/ui/hyper-text';
 
 export function Dropdown() {
   return (
-    <DropdownMenu>
+    <DropdownMenu modal={false}>
       <DropdownMenuTrigger asChild>
         <button className="cursor-pointer">
           <HyperText className="font-mono text-sm text-foreground transition-colors hover:text-[#d19b75]">
