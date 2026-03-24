@@ -12,6 +12,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { AnimatedThemeToggler } from '@/components/ui/animated-theme-toggler';
 import { HyperText } from '@/components/ui/hyper-text';
+import { Dropdown } from './Dropdown';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -74,6 +75,7 @@ export default function Header() {
               </HyperText>
             </Link>
           ))}
+          <Dropdown />
           <Link
             href="https://claude.com/product/claude-code"
             className="flex items-center gap-1 rounded-md px-2 py-2 font-mono text-sm transition-colors hover:opacity-80"
