@@ -9,7 +9,6 @@ const NAV_LINKS = [
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { AnimatedThemeToggler } from '@/components/ui/animated-theme-toggler';
 import { HyperText } from '@/components/ui/hyper-text';
 import { Dropdown } from './Dropdown';
