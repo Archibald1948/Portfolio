@@ -76,57 +76,43 @@ export default function Header() {
             </Link>
           ))}
           <Dropdown />
-          <Link
-            href="https://claude.com/product/claude-code"
-            className="flex items-center gap-1 rounded-md px-2 py-2 font-mono text-sm transition-colors hover:opacity-80"
-            style={{
-              backgroundColor: '#d19b75',
-              color: '#1A1A1A',
-            }}
-          >
-            <Image
-              src="/anthropic.png"
-              alt="Anthropic"
-              width={24}
-              height={24}
-              className="rounded-sm"
-            />
-            Claude
-          </Link>
         </nav>
 
         {/* Mobile Hamburger Button */}
-        <button
-          className="md:hidden flex justify-center items-center w-8 h-8 cursor-pointer relative"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          <span
-            className="absolute block w-4 h-[2px] transition-all duration-300 ease-out"
-            style={{
-              backgroundColor: 'var(--foreground)',
-              transform: isMobileMenuOpen
-                ? 'rotate(45deg)'
-                : 'translateY(-4px)',
-            }}
-          />
-          <span
-            className="absolute block w-4 h-[2px] transition-all duration-300 ease-out"
-            style={{
-              backgroundColor: 'var(--foreground)',
-              opacity: isMobileMenuOpen ? 0 : 1,
-            }}
-          />
-          <span
-            className="absolute block w-4 h-[2px] transition-all duration-300 ease-out"
-            style={{
-              backgroundColor: 'var(--foreground)',
-              transform: isMobileMenuOpen
-                ? 'rotate(-45deg)'
-                : 'translateY(4px)',
-            }}
-          />
-        </button>
+        <div className="flex items-center gap-4">
+          <AnimatedThemeToggler className="text-foreground cursor-pointer hover:text-[#d19b75] transition-colors" />
+          <button
+            className="md:hidden flex justify-center items-center w-8 h-8 cursor-pointer relative"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            <span
+              className="absolute block w-4 h-[2px] transition-all duration-300 ease-out"
+              style={{
+                backgroundColor: 'var(--foreground)',
+                transform: isMobileMenuOpen
+                  ? 'rotate(45deg)'
+                  : 'translateY(-4px)',
+              }}
+            />
+            <span
+              className="absolute block w-4 h-[2px] transition-all duration-300 ease-out"
+              style={{
+                backgroundColor: 'var(--foreground)',
+                opacity: isMobileMenuOpen ? 0 : 1,
+              }}
+            />
+            <span
+              className="absolute block w-4 h-[2px] transition-all duration-300 ease-out"
+              style={{
+                backgroundColor: 'var(--foreground)',
+                transform: isMobileMenuOpen
+                  ? 'rotate(-45deg)'
+                  : 'translateY(4px)',
+              }}
+            />
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
@@ -138,7 +124,8 @@ export default function Header() {
         }}
       >
         <nav className="flex flex-col items-end px-6 pb-6 gap-4 bg-background">
-          <div className="flex items-end gap-4">
+          <div className="flex items-center gap-4">
+            <Dropdown />
             {NAV_LINKS.map(({ label, href }) => (
               <Link
                 key={label}
@@ -146,30 +133,11 @@ export default function Header() {
                 className="font-mono text-sm text-foreground transition-colors hover:text-[#d19b75] py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                {label}
+                <HyperText className="font-mono text-sm text-foreground">
+                  {label}
+                </HyperText>
               </Link>
             ))}
-          </div>
-          <div className="flex items-center gap-4">
-            <AnimatedThemeToggler className="text-foreground cursor-pointer hover:text-[#d19b75] transition-colors" />
-            <Link
-              href="https://claude.com/product/claude-code"
-              className="flex items-center gap-1 rounded-md px-3 py-2 font-mono text-sm transition-colors hover:opacity-80"
-              style={{
-                backgroundColor: '#d19b75',
-                color: '#1A1A1A',
-              }}
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              <Image
-                src="/anthropic.png"
-                alt="Anthropic"
-                width={24}
-                height={24}
-                className="rounded-sm"
-              />
-              Claude
-            </Link>
           </div>
         </nav>
       </div>
