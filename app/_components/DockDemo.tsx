@@ -1,18 +1,17 @@
 'use client';
 
-import React from 'react';
-import Link from 'next/link';
-
-import { Dock, DockIcon } from '@/components/ui/dock';
-
-export type IconProps = React.HTMLAttributes<SVGElement>;
-
 const LINKS = {
   github: 'https://github.com/kss2002',
   linkedin: 'https://www.linkedin.com/in/seong-su-kim-5b606338a',
   gmail: 'mailto:know.warehouse02@gmail.com',
   naver: 'mailto:sc00310@naver.com',
 } as const;
+
+import React from 'react';
+import Link from 'next/link';
+import { Dock, DockIcon } from '@/components/ui/dock';
+
+export type IconProps = React.HTMLAttributes<SVGElement>;
 
 export function DockDemo() {
   return (
