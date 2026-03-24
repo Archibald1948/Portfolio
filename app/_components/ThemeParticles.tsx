@@ -24,7 +24,7 @@ export default function ThemeParticles() {
 
   return (
     <Particles
-      className="absolute inset-0 z-10 pointer-events-none opacity-50"
+      className="absolute inset-0 z-10 pointer-events-none"
       quantity={40}
       staticity={60}
       ease={50}
