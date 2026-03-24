@@ -66,7 +66,6 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
-          <AnimatedThemeToggler className="text-foreground cursor-pointer hover:text-[#d19b75] transition-colors" />
           {NAV_LINKS.map(({ label, href }) => (
             <Link key={label} href={href}>
               <HyperText className="font-mono text-sm text-foreground transition-colors hover:text-[#d19b75]">
