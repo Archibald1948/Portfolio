@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Frontend Developer',
-  description: 'It embodies imagination in code.',
+  title: 'Frontend Developer Portfolio',
+  description: '코드로 상상을 구현합니다.',
 };
 
 export default function RootLayout({
