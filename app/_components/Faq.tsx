@@ -1,7 +1,7 @@
 'use client';
 
 const CONTENT = {
-  title: '저에 대해',
+  title: 'About Me',
   faqs: [
     {
       question: '주요 기술 스택은 무엇인가요?',
@@ -25,7 +25,7 @@ const CONTENT = {
     },
   ],
   cta: {
-    title: '함께 멋진 것을 만들어봐요.',
+    title: "Let's build something together.",
   },
 } as const;
 

@@ -132,7 +132,7 @@ export default function Imonial() {
       <div className="mx-auto max-w-7xl px-6">
         {/* Section Title */}
         <h2 className="mb-12 text-center font-mono text-2xl font-medium text-foreground">
-          <AuroraText>활동</AuroraText> 및 프로젝트
+          <AuroraText>Activities</AuroraText> & Projects
         </h2>
 
         {/* Three Column Layout */}

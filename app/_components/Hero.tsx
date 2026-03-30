@@ -69,7 +69,7 @@ export default function Hero() {
               src="https://cdn.magicui.design/ocean-small.webm"
               fontSize="4vw"
             >
-              주요 기술
+              Main Techs
             </VideoText>
           </h3>
           <div className="mb-8 flex justify-center overflow-x-auto px-2">
@@ -81,7 +81,7 @@ export default function Hero() {
             />
           </div>
           <h3 className="mb-6 font-mono text-base md:text-lg font-medium text-foreground">
-            도구 및 기타 기술
+            Sub Techs
           </h3>
           <div className="flex flex-col items-center gap-3 sm:gap-4 overflow-x-auto px-2">
             {/* eslint-disable-next-line @next/next/no-img-element */}

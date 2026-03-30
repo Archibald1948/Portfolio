@@ -4,7 +4,7 @@ const CONTRIBUTIONS = {
   organizations: [
     {
       name: 'Toss',
-      badge: '기여자',
+      badge: 'Contributors',
       color: '#0064FF',
       link: 'https://github.com/toss',
       projects: [
@@ -36,7 +36,7 @@ const CONTRIBUTIONS = {
     },
     {
       name: 'DevFive',
-      badge: '기여자',
+      badge: 'Contributors',
       color: '#5a44ff',
       link: 'https://github.com/dev-five-git',
       projects: [
@@ -71,7 +71,7 @@ export default function OpenSource() {
       <div className="mx-auto max-w-7xl px-6">
         {/* Section Title */}
         <h2 className="mb-4 text-center font-mono text-2xl font-medium text-foreground">
-          오픈소스 기여
+          Open Source Contributions
         </h2>
         <p className="mb-12 text-center font-mono text-sm text-muted-foreground">
           커뮤니티에 PR 하나씩 기여하고 있습니다.
@@ -146,7 +146,7 @@ export default function OpenSource() {
                           }}
                         >
                           <CircleDot className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
-                          이슈
+                          Issues
                         </Link>
                       )}
                       {'graphsLink' in project && project.graphsLink && (
@@ -159,7 +159,7 @@ export default function OpenSource() {
                           }}
                         >
                           <BarChart3 className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
-                          기여자
+                          Contributors
                         </Link>
                       )}
                     </div>
@@ -179,7 +179,7 @@ export default function OpenSource() {
             className="font-tossface text-sm text-foreground hover:opacity-80"
             href={MEETING.link}
           >
-            🔗 저장소
+            🔗 Repository
           </Link>
         </div>
       </div>
