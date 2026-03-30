@@ -14,7 +14,7 @@ const SECTIONS = {
   },
   product: {
     title: '🚀 프로덕트',
-    subtitle: '직접 만든 서비스',
+    subtitle: '서비스',
     items: [
       {
         title: 'ShortsGen',
