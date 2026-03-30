@@ -2,8 +2,8 @@
 
 const SECTIONS = {
   community: {
-    title: '🌍 Community',
-    subtitle: 'Active member & organizer',
+    title: '🌍 커뮤니티',
+    subtitle: '활발한 멤버 및 운영진 활동',
     items: [
       { title: 'GDGoC', period: '2024.03 ~ 2025.09', badge: null },
       { title: '카카오 유니브', period: '2024.06 ~ 2024.12', badge: null },
@@ -13,12 +13,12 @@ const SECTIONS = {
     ],
   },
   product: {
-    title: '🚀 Product',
-    subtitle: 'Products built',
+    title: '🚀 프로덕트',
+    subtitle: '직접 만든 서비스',
     items: [
       {
         title: 'ShortsGen',
-        period: 'Active',
+        period: '진행 중',
         badge: '대모산 개발단',
         link: 'https://shorts-demodev.vercel.app',
       },
@@ -37,8 +37,8 @@ const SECTIONS = {
     ],
   },
   project: {
-    title: '💻 Projects',
-    subtitle: 'Hackathons & Team Projects',
+    title: '💻 프로젝트',
+    subtitle: '해커톤 및 팀 프로젝트',
     items: [
       {
         title: '카카오 단풍톤',
@@ -132,7 +132,7 @@ export default function Imonial() {
       <div className="mx-auto max-w-7xl px-6">
         {/* Section Title */}
         <h2 className="mb-12 text-center font-mono text-2xl font-medium text-foreground">
-          <AuroraText>Activities</AuroraText> & Projects
+          <AuroraText>활동</AuroraText> 및 프로젝트
         </h2>
 
         {/* Three Column Layout */}

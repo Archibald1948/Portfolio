@@ -4,7 +4,7 @@ const CONTRIBUTIONS = {
   organizations: [
     {
       name: 'Toss',
-      badge: 'Contributor',
+      badge: '기여자',
       color: '#0064FF',
       link: 'https://github.com/toss',
       projects: [
@@ -36,7 +36,7 @@ const CONTRIBUTIONS = {
     },
     {
       name: 'DevFive',
-      badge: 'Contributor',
+      badge: '기여자',
       color: '#5a44ff',
       link: 'https://github.com/dev-five-git',
       projects: [
@@ -71,10 +71,10 @@ export default function OpenSource() {
       <div className="mx-auto max-w-7xl px-6">
         {/* Section Title */}
         <h2 className="mb-4 text-center font-mono text-2xl font-medium text-foreground">
-          Open Source Contributions
+          오픈소스 기여
         </h2>
         <p className="mb-12 text-center font-mono text-sm text-muted-foreground">
-          Contributing to the community, one PR at a time.
+          커뮤니티에 PR 하나씩 기여하고 있습니다.
         </p>
 
         {/* Organizations Grid */}
@@ -133,7 +133,7 @@ export default function OpenSource() {
                           }}
                         >
                           <GitPullRequest className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
-                          PRs
+                          PR
                         </Link>
                       )}
                       {project.issueLink && (
@@ -146,7 +146,7 @@ export default function OpenSource() {
                           }}
                         >
                           <CircleDot className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
-                          Issues
+                          이슈
                         </Link>
                       )}
                       {'graphsLink' in project && project.graphsLink && (
@@ -159,7 +159,7 @@ export default function OpenSource() {
                           }}
                         >
                           <BarChart3 className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
-                          Contributors
+                          기여자
                         </Link>
                       )}
                     </div>
@@ -173,14 +173,13 @@ export default function OpenSource() {
         {/* Community Note */}
         <div className="mt-12 text-center">
           <p className="font-mono text-xs text-muted-foreground">
-            Also participated in 오픈소스기여 모임 10기 (2025.12.26 ~
-            2026.01.25)
+            오픈소스기여 모임 10기에도 참여했습니다 (2025.12.26 ~ 2026.01.25)
           </p>
           <Link
             className="font-tossface text-sm text-foreground hover:opacity-80"
             href={MEETING.link}
           >
-            🔗 Repository
+            🔗 저장소
           </Link>
         </div>
       </div>

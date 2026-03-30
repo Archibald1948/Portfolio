@@ -1,30 +1,31 @@
 'use client';
 
 const CONTENT = {
-  title: 'About Me',
+  title: '저에 대해',
   faqs: [
     {
-      question: 'What is your main tech stack?',
+      question: '주요 기술 스택은 무엇인가요?',
       answer:
-        'React, Next.js, TypeScript, Node.js. I also work with Ruby on Rails and various CSS frameworks.',
+        'React, Next.js, TypeScript, Node.js를 주로 사용합니다. Ruby on Rails와 다양한 CSS 프레임워크도 함께 다룹니다.',
     },
     {
-      question: 'What open source projects have you contributed to?',
+      question: '어떤 오픈소스 프로젝트에 기여했나요?',
       answer:
-        'I contribute to Toss (suspensive, frontend-fundamentals, granite) and DevFive (devup-ui) projects.',
+        'Toss(suspensive, frontend-fundamentals, granite)와 DevFive(devup-ui) 프로젝트에 기여하고 있습니다.',
     },
     {
-      question: 'What communities are you involved in?',
+      question: '어떤 커뮤니티에서 활동하고 있나요?',
       answer:
-        'GDG, Kakao Univ (운영진), LikeLion (멋쟁이사자처럼 운영진), and Open Source Contributors Group.',
+        'GDG, 카카오 유니브(운영진), 멋쟁이사자처럼(운영진), 오픈소스 컨트리뷰터 그룹에서 활동하고 있습니다.',
     },
     {
-      question: 'How can I contact you?',
-      answer: 'Email me at know.warehouse02@gmail.com or connect on LinkedIn.',
+      question: '어떻게 연락할 수 있나요?',
+      answer:
+        'know.warehouse02@gmail.com으로 메일을 보내거나 LinkedIn으로 연락 주세요.',
     },
   ],
   cta: {
-    title: "Let's build something together.",
+    title: '함께 멋진 것을 만들어봐요.',
   },
 } as const;
 
@@ -67,7 +68,7 @@ export default function Faq() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="https://render.gitanimals.org/farms/kss2002"
-            alt="Git Animals Farm"
+            alt="깃 애니멀 농장"
             className="w-full max-w-[600px] h-auto mx-auto"
           />
         </a>

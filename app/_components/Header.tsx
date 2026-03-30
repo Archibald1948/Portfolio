@@ -1,10 +1,10 @@
 'use client';
 
 const NAV_LINKS = [
-  { label: 'Blog', href: 'https://codingworld2002.tistory.com' },
-  { label: 'GitHub', href: 'https://github.com/kss2002' },
-  { label: 'Tailwind', href: 'https://tailwindcss.com/' },
-  { label: 'MagicUI', href: 'https://magicui.design' },
+  { label: '블로그', href: 'https://codingworld2002.tistory.com' },
+  { label: '깃허브', href: 'https://github.com/kss2002' },
+  { label: '테일윈드', href: 'https://tailwindcss.com/' },
+  { label: '매직UI', href: 'https://magicui.design' },
 ] as const;
 
 import { useState, useEffect } from 'react';
@@ -82,7 +82,7 @@ export default function Header() {
           <button
             className="md:hidden flex justify-center items-center w-8 h-8 cursor-pointer relative"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle menu"
+            aria-label="메뉴 열기/닫기"
           >
             <span
               className="absolute block w-4 h-[2px] transition-all duration-300 ease-out"

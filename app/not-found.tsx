@@ -4,8 +4,8 @@ import { Home } from 'lucide-react';
 import { HyperText } from '@/components/ui/hyper-text';
 
 export const metadata: Metadata = {
-  title: '404 - Page Not Found',
-  description: 'The page you are looking for does not exist.',
+  title: '404 - 페이지를 찾을 수 없습니다',
+  description: '요청하신 페이지가 존재하지 않습니다.',
 };
 
 export default function NotFound() {
@@ -22,13 +22,13 @@ export default function NotFound() {
 
       {/* Title */}
       <h1 className="mb-4 text-center font-mono text-3xl font-bold md:text-5xl text-foreground">
-        <HyperText>Page Not Found</HyperText>
+        <HyperText>페이지를 찾을 수 없습니다</HyperText>
       </h1>
 
       {/* Description */}
       <p className="mb-8 max-w-md text-center font-mono text-sm md:text-base text-muted-foreground">
-        Oops! <br />
-        The page you&apos;re looking for doesn&apos;t exist or has been moved.
+        앗! <br />
+        찾으시는 페이지가 없거나 이동되었습니다.
       </p>
 
       {/* Buttons */}
@@ -38,7 +38,7 @@ export default function NotFound() {
           className="flex items-center gap-2 rounded-md px-6 py-3 font-mono text-sm transition-colors hover:opacity-90 bg-foreground text-background"
         >
           <Home className="h-4 w-4" />
-          Go Home
+          홈으로 가기
         </Link>
       </div>
     </main>

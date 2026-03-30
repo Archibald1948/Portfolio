@@ -3,13 +3,13 @@
 const CONTENT = {
   copyright: '2026 Kim Seong Su',
   links: [
-    { label: 'Gist', href: 'https://gist.github.com/kss2002' },
+    { label: '기스트', href: 'https://gist.github.com/kss2002' },
     {
-      label: 'LinkedIn',
+      label: '링크드인',
       href: 'https://www.linkedin.com/in/seong-su-kim-5b606338a',
     },
-    { label: 'Gmail', href: 'mailto:know.warehouse02@gmail.com' },
-    { label: 'Naver', href: 'mailto:sc00310@naver.com' },
+    { label: '지메일', href: 'mailto:know.warehouse02@gmail.com' },
+    { label: '네이버', href: 'mailto:sc00310@naver.com' },
   ],
 } as const;
 
