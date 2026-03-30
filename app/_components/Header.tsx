@@ -1,10 +1,10 @@
 'use client';
 
 const NAV_LINKS = [
-  { label: '블로그', href: 'https://codingworld2002.tistory.com' },
-  { label: '깃허브', href: 'https://github.com/kss2002' },
-  { label: '테일윈드', href: 'https://tailwindcss.com/' },
-  { label: '매직UI', href: 'https://magicui.design' },
+  { label: 'blog', href: 'https://codingworld2002.tistory.com' },
+  { label: 'github', href: 'https://github.com/kss2002' },
+  { label: 'tailwind', href: 'https://tailwindcss.com/' },
+  { label: 'magicui', href: 'https://magicui.design' },
 ] as const;
 
 import { useState, useEffect } from 'react';
