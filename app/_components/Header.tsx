@@ -3,8 +3,6 @@
 const NAV_LINKS = [
   { label: 'blog', href: 'https://codingworld2002.tistory.com' },
   { label: 'github', href: 'https://github.com/kss2002' },
-  { label: 'tailwind', href: 'https://tailwindcss.com/' },
-  { label: 'magicui', href: 'https://magicui.design' },
 ] as const;
 
 import { useState, useEffect } from 'react';
