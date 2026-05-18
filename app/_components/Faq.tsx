@@ -1,5 +1,7 @@
 'use client';
 
+import FaqShowcase from './FaqShowcase';
+
 const CONTENT = {
   title: 'About Me',
   faqs: [
@@ -59,20 +61,7 @@ export default function Faq() {
           </h3>
         </div>
       </div>
-
-      <div className="mx-auto max-w-2xl px-6 py-10 overflow-hidden">
-        <a
-          href="https://www.gitanimals.org/en_US?utm_medium=image&utm_source=kss2002&utm_content=farm"
-          className="block"
-        >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="https://render.gitanimals.org/farms/kss2002"
-            alt="깃 애니멀 농장"
-            className="w-full max-w-[600px] h-auto mx-auto"
-          />
-        </a>
-      </div>
+      <FaqShowcase />
     </section>
   );
 }
