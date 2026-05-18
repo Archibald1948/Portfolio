@@ -18,11 +18,9 @@ export function Dropdown() {
   return (
     <DropdownMenu modal={false}>
       <DropdownMenuTrigger asChild>
-        <button className="cursor-pointer">
-          <HyperText className="font-mono text-sm text-foreground transition-colors hover:text-[#d19b75]">
-            AI
-          </HyperText>
-        </button>
+        <HyperText className="cursor-pointer font-mono text-sm text-foreground transition-colors hover:text-[#d19b75]">
+          AI
+        </HyperText>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         {AI_LINKS.map((item) => (
