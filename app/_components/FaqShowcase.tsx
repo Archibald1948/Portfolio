@@ -10,11 +10,11 @@ import {
 
 export default function FaqShowcase() {
   return (
-    <div className="mx-auto max-w-5xl px-6 py-10">
+    <div className="mx-auto w-full max-w-5xl px-4 py-10 sm:px-6">
       <div className="grid gap-6 lg:grid-cols-[0.90fr_1.05fr] lg:items-stretch">
         <a
           href="https://www.gitanimals.org/en_US?utm_medium=image&utm_source=kss2002&utm_content=farm"
-          className="bg-emerald-700 group flex min-h-70 items-center justify-center rounded-2xl shadow-xl shadow-black/20 dark:shadow-white/20 p-4 transition-colors duration-300"
+          className="bg-emerald-700 group flex min-h-48 min-w-0 items-center justify-center rounded-2xl shadow-xl shadow-black/20 dark:shadow-white/20 p-3 transition-colors duration-300 sm:min-h-70 sm:p-4"
           aria-label="깃 애니멀 농장 보기"
         >
           <div className="relative flex w-full max-w-140 overflow-hidden rounded-xl">
@@ -29,32 +29,36 @@ export default function FaqShowcase() {
           </div>
         </a>
 
-        <div className="rounded-2xl border-2 border-border/60 shadow-xl shadow-black/20 dark:shadow-white/20 lg:border-l-0">
-          <Terminal className="h-full max-w-none rounded-none border-0 bg-transparent">
-            <TypingAnimation>&gt; who am i</TypingAnimation>
+        <div className="min-w-0 overflow-hidden rounded-2xl border-2 border-border/60 shadow-xl shadow-black/20 dark:shadow-white/20 lg:border-l-0">
+          <Terminal className="h-full w-full max-w-none rounded-none border-0 bg-transparent text-xs sm:text-sm">
+            <TypingAnimation className="whitespace-pre-wrap break-words">
+              &gt; who am i
+            </TypingAnimation>
 
-            <AnimatedSpan className="text-green-400">
+            <AnimatedSpan className="whitespace-pre-wrap break-words text-green-400">
               ✔ React, Next.js, TypeScript, Node.js
             </AnimatedSpan>
 
-            <AnimatedSpan className="text-green-400">
+            <AnimatedSpan className="whitespace-pre-wrap break-words text-green-400">
               ✔ OSS contributions: Toss, DevFive
             </AnimatedSpan>
 
-            <AnimatedSpan className="text-green-400">
+            <AnimatedSpan className="whitespace-pre-wrap break-words text-green-400">
               ✔ Community: GDG, Kakao Univ, Like Lions
             </AnimatedSpan>
 
-            <AnimatedSpan className="text-blue-400">
-              <span>ℹ Contact:</span>
-              <span className="pl-2">know.warehouse02@gmail.com</span>
+            <AnimatedSpan className="whitespace-pre-wrap break-words text-blue-400">
+              <span className="flex flex-col gap-x-2 sm:flex-row sm:flex-wrap">
+                <span>ℹ Contact:</span>
+                <span className="break-all">know.warehouse02@gmail.com</span>
+              </span>
             </AnimatedSpan>
 
-            <TypingAnimation className="text-muted-foreground">
+            <TypingAnimation className="whitespace-pre-wrap break-words text-muted-foreground">
               &gt; pnpm install
             </TypingAnimation>
 
-            <TypingAnimation className="text-muted-foreground">
+            <TypingAnimation className="whitespace-pre-wrap break-words text-muted-foreground">
               &gt; pnpm dev
             </TypingAnimation>
           </Terminal>
