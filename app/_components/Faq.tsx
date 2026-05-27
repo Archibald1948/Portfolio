@@ -1,7 +1,5 @@
 'use client';
 
-import FaqShowcase from './FaqShowcase';
-
 const CONTENT = {
   title: 'About Me',
   faqs: [
@@ -30,6 +28,8 @@ const CONTENT = {
     title: "Let's build something together.",
   },
 } as const;
+
+import FaqShowcase from './FaqShowcase';
 
 export default function Faq() {
   return (
