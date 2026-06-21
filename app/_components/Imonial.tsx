@@ -153,8 +153,8 @@ export default function Imonial() {
               )}
             </div>
           </div>
-
           {/* Product Section */}
+          {/* 프로덕트 부분은 현재 주석처리 되어있음. 필요시 주석 해제 후 사용 가능.
           <div>
             <div className="mb-4">
               <h3 className="font-tossface text-lg font-bold text-foreground">
@@ -170,6 +170,7 @@ export default function Imonial() {
               )}
             </div>
           </div>
+          */}
 
           {/* Project Section */}
           <div>
