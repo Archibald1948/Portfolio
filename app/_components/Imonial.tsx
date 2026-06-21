@@ -135,8 +135,8 @@ export default function Imonial() {
           <AuroraText>Activities</AuroraText> & Projects
         </h2>
 
-        {/* Three Column Layout */}
-        <div className="grid gap-8 md:grid-cols-3">
+        {/* Column Layout */}
+        <div className="grid gap-8 md:grid-cols-2">
           {/* Community Section */}
           <div>
             <div className="mb-4">
