@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Frontend Developer Portfolio',
+  title: 'Developer Portfolio',
   description: '코드로 상상을 구현합니다.',
 };
 
