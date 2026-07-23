@@ -5,7 +5,7 @@ const CONTENT = {
   title: 'KIM SEONG SU',
   subtitle: '안녕하세요. 좋은 코드를 고민하는 김성수입니다.',
   description:
-    'React, Next.js, 오픈소스를 좋아하는 프론트엔드 개발자입니다. Toss와 DevFive 프로젝트에 꾸준히 기여하며, 제품을 만들고 해커톤에 참여하고 있습니다.',
+    'React, Next.js, 오픈소스를 좋아하는 개발자입니다. Toss와 DevFive 프로젝트에 꾸준히 기여하며, 제품을 만들고 해커톤에 참여하고 있습니다.',
   primaryCta: '깃허브 보기',
   secondaryCta: '연락하기',
 } as const;
