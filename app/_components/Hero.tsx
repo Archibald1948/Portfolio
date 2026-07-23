@@ -15,6 +15,58 @@ import { ArrowRight } from 'lucide-react';
 import { DockDemo } from './DockDemo';
 import { Highlighter } from '@/components/ui/highlighter';
 import { VideoText } from '@/components/ui/video-text';
+import { Marquee } from '@/components/ui/marquee';
+
+const MAIN_TECHS = [
+  'react',
+  'nextjs',
+  'js',
+  'ts',
+  'nodejs',
+  'md',
+  'ruby',
+  'rails',
+  'html',
+  'css',
+] as const;
+
+const SUB_TECHS_A = [
+  'git',
+  'github',
+  'bash',
+  'figma',
+  'notion',
+  'vite',
+  'webpack',
+  'vercel',
+  'netlify',
+  'tailwind',
+  'emotion',
+  'scss',
+] as const;
+
+const SUB_TECHS_B = [
+  'py',
+  'npm',
+  'yarn',
+  'pnpm',
+  'supabase',
+  'vscode',
+  'idea',
+  'pycharm',
+  'eclipse',
+] as const;
+
+function TechIcon({ slug, className }: { slug: string; className?: string }) {
+  return (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={`https://skillicons.dev/icons?i=${slug}`}
+      alt={slug}
+      className={className}
+    />
+  );
+}
 
 export default function Hero() {
   return (
@@ -72,31 +124,40 @@ export default function Hero() {
               Main Techs
             </VideoText>
           </h3>
-          <div className="mb-8 flex justify-center overflow-x-auto px-2">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="https://skillicons.dev/icons?i=react,nextjs,js,ts,nodejs,md,ruby,rails,html,css"
-              alt="주요 기술 스택"
-              className="h-10 sm:h-12 md:h-16 max-w-full object-contain"
-            />
-          </div>
+          <Marquee pauseOnHover className="mb-8 [--duration:25s]">
+            {MAIN_TECHS.map((slug) => (
+              <TechIcon
+                key={slug}
+                slug={slug}
+                className="h-10 sm:h-12 md:h-16"
+              />
+            ))}
+          </Marquee>
           <h3 className="mb-6 font-mono text-base md:text-lg font-medium text-foreground">
             Sub Techs
           </h3>
-          <div className="flex flex-col items-center gap-3 sm:gap-4 overflow-x-auto px-2">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="https://skillicons.dev/icons?i=git,github,bash,figma,notion,vite,webpack,vercel,netlify,tailwind,emotion,scss"
-              alt="도구"
-              className="h-8 sm:h-10 md:h-12 max-w-full object-contain"
-            />
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="https://skillicons.dev/icons?i=py,npm,yarn,pnpm,supabase,vscode,idea,pycharm,eclipse"
-              alt="기타 기술"
-              className="h-8 sm:h-10 md:h-12 max-w-full object-contain"
-            />
-          </div>
+          <Marquee pauseOnHover className="[--duration:30s]">
+            {SUB_TECHS_A.map((slug) => (
+              <TechIcon
+                key={slug}
+                slug={slug}
+                className="h-8 sm:h-10 md:h-12"
+              />
+            ))}
+          </Marquee>
+          <Marquee reverse pauseOnHover className="mt-3 sm:mt-4 [--duration:30s]">
+            {SUB_TECHS_B.map((slug) => (
+              <TechIcon
+                key={slug}
+                slug={slug}
+                className="h-8 sm:h-10 md:h-12"
+              />
+            ))}
+          </Marquee>
+
+          {/* 좌우 페이드 마스크 */}
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-1/6 bg-linear-to-r from-background" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-1/6 bg-linear-to-l from-background" />
         </div>
       </div>
     </section>
