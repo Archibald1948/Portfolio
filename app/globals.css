@@ -86,6 +86,61 @@
   font-family: 'Tossface';
 }
 
+/* ── Marquee (magicui) ─────────────────────────────
+   Tailwind 유틸 생성/콘텐츠 스캔에 의존하지 않도록 순수 CSS로 정의한다.
+   --duration / --gap 은 className의 Tailwind 유틸([--duration:25s] 등)로
+   덮어쓸 수 있고, 지정하지 않으면 var() 폴백 기본값을 사용한다.
+   (변수를 직접 선언하지 않아야 유틸이 우선 적용된다.) */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap, 1rem)));
+  }
+}
+@keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(-100% - var(--gap, 1rem)));
+  }
+}
+.marquee {
+  display: flex;
+  overflow: hidden;
+  padding: 0.5rem;
+  gap: var(--gap, 1rem);
+}
+.marquee--vertical {
+  flex-direction: column;
+}
+.marquee__group {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: var(--gap, 1rem);
+  animation: marquee var(--duration, 40s) linear infinite;
+}
+.marquee--vertical .marquee__group {
+  flex-direction: column;
+  animation-name: marquee-vertical;
+}
+.marquee--reverse .marquee__group {
+  animation-direction: reverse;
+}
+.marquee--pause:hover .marquee__group {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee__group {
+    animation: none;
+  }
+}
+
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
