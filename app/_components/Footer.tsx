@@ -1,7 +1,7 @@
 'use client';
 
 const CONTENT = {
-  copyright: '2026 Kim Seong Su',
+  copyright: '2026',
   links: [
     { label: 'Gist', href: 'https://gist.github.com/Archibald1948' },
     {
