@@ -2,7 +2,7 @@
 
 const NAV_LINKS = [
   { label: 'blog', href: 'https://codingworld2002.tistory.com' },
-  { label: 'github', href: 'https://github.com/kss2002' },
+  { label: 'github', href: 'https://github.com/Archibald1948' },
 ] as const;
 
 import { useState, useEffect } from 'react';
