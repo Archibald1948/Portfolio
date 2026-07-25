@@ -10,20 +10,20 @@ const CONTRIBUTIONS = {
       projects: [
         {
           name: 'suspensive',
-          prLink: 'https://github.com/toss/suspensive/pulls?q=kss2002',
-          issueLink: 'https://github.com/toss/suspensive/issues?q=kss2002',
+          prLink: 'https://github.com/toss/suspensive/pulls?q=Archibald1948',
+          issueLink: 'https://github.com/toss/suspensive/issues?q=Archibald1948',
         },
         {
           name: 'frontend-fundamentals',
           prLink:
-            'https://github.com/toss/frontend-fundamentals/pulls?q=kss2002',
+            'https://github.com/toss/frontend-fundamentals/pulls?q=Archibald1948',
           issueLink:
-            'https://github.com/toss/frontend-fundamentals/issues?q=kss2002',
+            'https://github.com/toss/frontend-fundamentals/issues?q=Archibald1948',
         },
         {
           name: 'granite',
-          prLink: 'https://github.com/toss/granite/pulls?q=kss2002',
-          issueLink: 'https://github.com/toss/granite/issues?q=kss2002',
+          prLink: 'https://github.com/toss/granite/pulls?q=Archibald1948',
+          issueLink: 'https://github.com/toss/granite/issues?q=Archibald1948',
         },
         {
           name: 'technical-writing',
