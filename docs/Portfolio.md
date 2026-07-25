@@ -15,21 +15,21 @@
 ### Product Activities
 
 - **ShortsGen** [🚀 Site](https://shorts-demodev.vercel.app)
-- **Pomodoro** [🚀GitHub](https://github.com/kss2002/pomodoro)
-- **Samsika** [🚀GitHub](https://github.com/kss2002/ThreeSix)
+- **Pomodoro** [🚀GitHub](https://github.com/Archibald1948/pomodoro)
+- **Samsika** [🚀GitHub](https://github.com/Archibald1948/ThreeSix)
 
 ### Project Activities
 
 - **카카오 단풍톤** `2024.11.01 ~ 12.10` / `팀장`  
-  [🔗 GitHub](https://github.com/kss2002/2024_DANPOONG_TEAM_60_FE)
+  [🔗 GitHub](https://github.com/Archibald1948/2024_DANPOONG_TEAM_60_FE)
 - **멋쟁이사자처럼 해커톤** `2025.07.22 ~ 08.26`  
-  [🔗 GitHub](https://github.com/kss2002/domo-fe)
+  [🔗 GitHub](https://github.com/Archibald1948/domo-fe)
 - **카카오 시즌톤** `2025.08.18 ~ 09.07`  
-  [🔗 GitHub](https://github.com/kss2002/2025_SEASONTHON_TEAM_63_FE)
+  [🔗 GitHub](https://github.com/Archibald1948/2025_SEASONTHON_TEAM_63_FE)
 - **XRPL 해커톤** `2025.09.14 ~ 09.20`  
-  [🔗 GitHub](https://github.com/kss2002/roasis-front)
+  [🔗 GitHub](https://github.com/Archibald1948/roasis-front)
 - **멋쟁이사자처럼 간지톤** `2025.11.01 ~ 11.22` / `팀장`  
-  [🔗 GitHub](https://github.com/kss2002/SCamp)
+  [🔗 GitHub](https://github.com/Archibald1948/SCamp)
 - **GDGoC onewave 해거톤** `2026.02.06 ~ 02.07`
   [🔗 GitHub](https://github.com/jihongeek/onewave-t17-fe)
 
@@ -55,12 +55,12 @@
 
 toss
 
-- [suspensive PR](https://github.com/toss/suspensive/pulls?q=kss2002)
-- [suspensive Issues](https://github.com/toss/suspensive/issues?q=kss2002)
-- [frontend-fundamentals PR](https://github.com/toss/frontend-fundamentals/pulls?q=kss2002)
-- [frontend-fundamentals Issues](https://github.com/toss/frontend-fundamentals/issues?q=kss2002)
-- [granite PR](https://github.com/toss/granite/pulls?q=kss2002+)
-- [granite Issues](https://github.com/toss/granite/issues?q=kss2002)
+- [suspensive PR](https://github.com/toss/suspensive/pulls?q=Archibald1948)
+- [suspensive Issues](https://github.com/toss/suspensive/issues?q=Archibald1948)
+- [frontend-fundamentals PR](https://github.com/toss/frontend-fundamentals/pulls?q=Archibald1948)
+- [frontend-fundamentals Issues](https://github.com/toss/frontend-fundamentals/issues?q=Archibald1948)
+- [granite PR](https://github.com/toss/granite/pulls?q=Archibald1948+)
+- [granite Issues](https://github.com/toss/granite/issues?q=Archibald1948)
 - [technical-writing PR](https://github.com/toss/technical-writing/pulls?q=is%3Apr+is%3Aclosed)
 - [technical-writing Issues](https://github.com/toss/technical-writing/issues?q=is%3Aissue%20state%3Aclosed)
 
@@ -74,7 +74,7 @@ devup-five
 ## Contact
 
 <p align="left">
-  <a href="https://gist.github.com/kss2002">
+  <a href="https://gist.github.com/Archibald1948">
   Gist
   </a>
   |
@@ -98,15 +98,15 @@ devup-five
 ## GitHub Trophies
 
 <div align="left">
-  <p align="center"><a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy-davevad93s-projects.vercel.app/?username=kss2002&theme=radical&rank=-B&column=-1" alt="kss2002 "/></a></p>
+  <p align="center"><a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy-davevad93s-projects.vercel.app/?username=Archibald1948&theme=radical&rank=-B&column=-1" alt="Archibald1948 "/></a></p>
 </div>
 
 ---
 
 <div align="center"> 
-<a href="https://www.gitanimals.org/en_US?utm_medium=image&utm_source=kss2002&utm_content=farm">
+<a href="https://www.gitanimals.org/en_US?utm_medium=image&utm_source=Archibald1948&utm_content=farm">
 <img
-  src="https://render.gitanimals.org/farms/kss2002"
+  src="https://render.gitanimals.org/farms/Archibald1948"
   width="600"
   height="300"
 />
@@ -115,12 +115,12 @@ devup-five
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/kss2002/kss2002/main/profile-3d-contrib/profile-night-rainbow.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/kss2002/kss2002/main/profile-3d-contrib/profile-green-animate.svg" />
-    <img alt="github profile contributions chart" src="https://raw.githubusercontent.com/kss2002/kss2002/main/profile-3d-contrib/profile-green-animate.svg" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Archibald1948/Archibald1948/main/profile-3d-contrib/profile-night-rainbow.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Archibald1948/Archibald1948/main/profile-3d-contrib/profile-green-animate.svg" />
+    <img alt="github profile contributions chart" src="https://raw.githubusercontent.com/Archibald1948/Archibald1948/main/profile-3d-contrib/profile-green-animate.svg" />
   </picture>
 </p>
 
 <div align="center">
-  <i>🔥 From <a href="https://github.com/kss2002">kss2002</a></i>
+  <i>🔥 From <a href="https://github.com/Archibald1948">Archibald1948</a></i>
 </div>
