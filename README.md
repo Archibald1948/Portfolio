@@ -62,7 +62,7 @@ port/
 
 ```bash
 # 저장소 클론
-git clone https://github.com/kss2002/Portfolio.git
+git clone https://github.com/Archibald1948/Portfolio.git
 cd Portfolio
 
 # 의존성 설치
@@ -90,10 +90,10 @@ pnpm start
 
 [![Gmail](https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:know.warehouse02@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/seong-su-kim-5b606338a)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kss2002)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Archibald1948)
 
 </div>
 
 <div align="center">
-  <sub>Built with ❤️ by <a href="https://github.com/kss2002">Kim Seong Su</a></sub>
+  <sub>Built with ❤️ by <a href="https://github.com/Archibald1948">Kim Seong Su</a></sub>
 </div>
