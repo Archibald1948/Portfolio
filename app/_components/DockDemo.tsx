@@ -1,7 +1,7 @@
 'use client';
 
 const LINKS = {
-  github: 'https://github.com/kss2002',
+  github: 'https://github.com/Archibald1948',
   linkedin: 'https://www.linkedin.com/in/seong-su-kim-5b606338a',
   gmail: 'mailto:know.warehouse02@gmail.com',
   naver: 'mailto:sc00310@naver.com',
