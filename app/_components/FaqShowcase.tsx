@@ -13,13 +13,13 @@ export default function FaqShowcase() {
     <div className="mx-auto w-full max-w-5xl px-4 py-10 sm:px-6">
       <div className="grid gap-6 lg:grid-cols-[0.90fr_1.05fr] lg:items-stretch">
         <a
-          href="https://www.gitanimals.org/en_US?utm_medium=image&utm_source=kss2002&utm_content=farm"
+          href="https://www.gitanimals.org/en_US?utm_medium=image&utm_source=Archibald1948&utm_content=farm"
           className="bg-emerald-700 group flex min-h-48 min-w-0 items-center justify-center rounded-2xl shadow-xl shadow-black/20 dark:shadow-white/20 p-3 transition-colors duration-300 sm:min-h-70 sm:p-4"
           aria-label="깃 애니멀 농장 보기"
         >
           <div className="relative flex w-full max-w-140 overflow-hidden rounded-xl">
             <Image
-              src="https://render.gitanimals.org/farms/kss2002"
+              src="https://render.gitanimals.org/farms/Archibald1948"
               alt="깃 애니멀 농장"
               width={1200}
               height={720}
