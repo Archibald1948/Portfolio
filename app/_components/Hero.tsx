@@ -3,7 +3,7 @@
 const CONTENT = {
   badge: 'TIL',
   title: 'KIM SEONG SU',
-  subtitle: '안녕하세요. 좋은 코드를 고민하는 김성수입니다.',
+  subtitle: '안녕하세요. 좋은 코드와 구조를 고민합니다.',
   description:
     'React, Next.js, 오픈소스를 좋아하는 개발자입니다. Toss와 DevFive 프로젝트에 꾸준히 기여하며, 제품을 만들고 해커톤에 참여하고 있습니다.',
   primaryCta: '깃허브 보기',
@@ -145,7 +145,11 @@ export default function Hero() {
               />
             ))}
           </Marquee>
-          <Marquee reverse pauseOnHover className="mt-3 sm:mt-4 [--duration:30s]">
+          <Marquee
+            reverse
+            pauseOnHover
+            className="mt-3 sm:mt-4 [--duration:30s]"
+          >
             {SUB_TECHS_B.map((slug) => (
               <TechIcon
                 key={slug}
