@@ -29,36 +29,17 @@ export default function Header() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         <Link href="/" className="flex items-center">
           <div className="flex font-mono text-xs leading-tight sm:text-sm md:text-base">
-            <span className="text-foreground">k</span>
+            <span className="text-foreground">A</span>
             <span
               className="inline-block overflow-hidden transition-all duration-500 ease-out text-foreground"
               style={{
-                maxWidth: isScrolled ? '0px' : '2ch',
+                maxWidth: isScrolled ? '0px' : '8ch',
                 opacity: isScrolled ? 0 : 1,
               }}
             >
-              im
+              rchibald
             </span>
-            <span className="text-foreground">s</span>
-            <span
-              className="inline-block overflow-hidden transition-all duration-500 ease-out text-foreground"
-              style={{
-                maxWidth: isScrolled ? '0px' : '4ch',
-                opacity: isScrolled ? 0 : 1,
-              }}
-            >
-              eong
-            </span>
-            <span className="text-foreground">s</span>
-            <span
-              className="inline-block overflow-hidden transition-all duration-500 ease-out text-foreground"
-              style={{
-                maxWidth: isScrolled ? '0px' : '1ch',
-                opacity: isScrolled ? 0 : 1,
-              }}
-            >
-              u
-            </span>
+            <span className="text-foreground">1948</span>
           </div>
         </Link>
 
