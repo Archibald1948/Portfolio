@@ -3,7 +3,7 @@
 const CONTENT = {
   copyright: '2026 Kim Seong Su',
   links: [
-    { label: 'Gist', href: 'https://gist.github.com/kss2002' },
+    { label: 'Gist', href: 'https://gist.github.com/Archibald1948' },
     {
       label: 'LinkedIn',
       href: 'https://www.linkedin.com/in/seong-su-kim-5b606338a',
