@@ -75,7 +75,7 @@ export default function Hero() {
         {/* Version Badge */}
         <div className="mb-8 flex justify-center">
           <Link
-            href="https://github.com/kss2002/TIL"
+            href="https://github.com/Archibald1948/TIL"
             className="inline-flex items-center gap-2 font-mono text-sm text-muted-foreground transition-colors hover:opacity-80"
           >
             {CONTENT.badge}
